@@ -74,6 +74,11 @@
     <Compile Include="Party Form.Designer.cs">
       <DependentUpon>Party Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartyDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartyDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PartyManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +98,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="PartyDatabaseDataSet.xsc">
+      <DependentUpon>PartyDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartyDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartyDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PartyDatabaseDataSet.xss">
+      <DependentUpon>PartyDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
