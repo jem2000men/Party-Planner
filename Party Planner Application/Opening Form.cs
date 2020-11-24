@@ -19,8 +19,6 @@ namespace Party_Planner_Application
 
         private void openingForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Guests' table. You can move, or remove it, as needed.
-            this.guestsTableAdapter.Fill(this.partyDatabaseDataSet.Guests);
 
         }
 
@@ -29,12 +27,5 @@ namespace Party_Planner_Application
           
         }
 
-        private void guestsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.guestsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
-
-        }
     }
 }
