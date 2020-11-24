@@ -80,7 +80,7 @@
             // calenderButton
             // 
             this.calenderButton.Font = new System.Drawing.Font("MV Boli", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calenderButton.Location = new System.Drawing.Point(260, 190);
+            this.calenderButton.Location = new System.Drawing.Point(252, 363);
             this.calenderButton.Name = "calenderButton";
             this.calenderButton.Size = new System.Drawing.Size(162, 72);
             this.calenderButton.TabIndex = 0;
