@@ -156,6 +156,7 @@
             this.partyList.Size = new System.Drawing.Size(322, 236);
             this.partyList.TabIndex = 4;
             this.partyList.Visible = false;
+            this.partyList.SelectedIndexChanged += new System.EventHandler(this.partyList_SelectedIndexChanged);
             // 
             // partyDatabaseDataSet
             // 

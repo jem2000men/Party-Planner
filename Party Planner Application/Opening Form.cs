@@ -12,6 +12,7 @@ namespace Party_Planner_Application
 {
     public partial class openingForm : Form
     {
+        bool fistBox = true;
         public openingForm()
         {
             InitializeComponent();
@@ -19,9 +20,6 @@ namespace Party_Planner_Application
 
         private void openingForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Parties' table. You can move, or remove it, as needed.
-            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
-
         }
 
         private void calenderButton_Click(object sender, EventArgs e)
@@ -33,15 +31,32 @@ namespace Party_Planner_Application
         {
             Party_Form partyForm = new Party_Form();
             partyForm.ShowDialog();
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
 
         }
 
         private void parttyListButton_Click(object sender, EventArgs e)
         {
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             if (partyList.Visible == false)
                 partyList.Visible = true;
             else
                 partyList.Visible = false;
+        }
+
+        private void partyList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (fistBox == true)
+            {
+                fistBox = false;
+            }
+            else
+            {
+                fistBox = true;
+                Party_Form partyForm = new Party_Form();
+                partyForm.ShowDialog();
+                this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            }
         }
     }
 }

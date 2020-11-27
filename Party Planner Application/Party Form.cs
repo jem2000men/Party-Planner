@@ -16,5 +16,27 @@ namespace Party_Planner_Application
         {
             InitializeComponent();
         }
+
+        private void partiesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.partiesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+
+        }
+
+        private void Party_Form_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Parties' table. You can move, or remove it, as needed.
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.partiesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+        }
     }
 }
