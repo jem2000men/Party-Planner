@@ -33,8 +33,8 @@
             this.addPartyButton = new System.Windows.Forms.Button();
             this.calendarButton = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
-            this.logoPanel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logoPanel2 = new System.Windows.Forms.Panel();
             this.mainMenuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +84,7 @@
             this.addPartyButton.TabIndex = 2;
             this.addPartyButton.Text = "Add Party";
             this.addPartyButton.UseVisualStyleBackColor = true;
+            this.addPartyButton.Click += new System.EventHandler(this.addPartyButton_Click);
             // 
             // calendarButton
             // 
@@ -111,6 +112,16 @@
             this.logoPanel.Size = new System.Drawing.Size(332, 154);
             this.logoPanel.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Party_Planner_Application.Properties.Resources.LogoHat;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(320, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // logoPanel2
             // 
             this.logoPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
@@ -121,16 +132,6 @@
             this.logoPanel2.Name = "logoPanel2";
             this.logoPanel2.Size = new System.Drawing.Size(1069, 863);
             this.logoPanel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Party_Planner_Application.Properties.Resources.LogoHat;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // openingForm
             // 

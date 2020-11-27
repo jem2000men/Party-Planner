@@ -27,5 +27,11 @@ namespace Party_Planner_Application
           
         }
 
+        private void addPartyButton_Click(object sender, EventArgs e)
+        {
+            Party_Form partyForm = new Party_Form();
+            partyForm.ShowDialog();
+
+        }
     }
 }
