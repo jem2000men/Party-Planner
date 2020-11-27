@@ -19,6 +19,8 @@ namespace Party_Planner_Application
 
         private void openingForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Parties' table. You can move, or remove it, as needed.
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
 
         }
 
@@ -32,6 +34,14 @@ namespace Party_Planner_Application
             Party_Form partyForm = new Party_Form();
             partyForm.ShowDialog();
 
+        }
+
+        private void parttyListButton_Click(object sender, EventArgs e)
+        {
+            if (partyList.Visible == false)
+                partyList.Visible = true;
+            else
+                partyList.Visible = false;
         }
     }
 }

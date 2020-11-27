@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.parttyListButton = new System.Windows.Forms.Button();
             this.addPartyButton = new System.Windows.Forms.Button();
@@ -35,15 +36,22 @@
             this.logoPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logoPanel2 = new System.Windows.Forms.Panel();
+            this.partyList = new System.Windows.Forms.ListBox();
+            this.partyDatabaseDataSet = new Party_Planner_Application.PartyDatabaseDataSet();
+            this.partiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.partiesTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.PartiesTableAdapter();
             this.mainMenuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuPanel
             // 
             this.mainMenuPanel.AutoScroll = true;
             this.mainMenuPanel.BackColor = System.Drawing.Color.Black;
+            this.mainMenuPanel.Controls.Add(this.partyList);
             this.mainMenuPanel.Controls.Add(this.parttyListButton);
             this.mainMenuPanel.Controls.Add(this.addPartyButton);
             this.mainMenuPanel.Controls.Add(this.calendarButton);
@@ -69,6 +77,7 @@
             this.parttyListButton.TabIndex = 3;
             this.parttyListButton.Text = "Party List";
             this.parttyListButton.UseVisualStyleBackColor = true;
+            this.parttyListButton.Click += new System.EventHandler(this.parttyListButton_Click);
             // 
             // addPartyButton
             // 
@@ -133,6 +142,35 @@
             this.logoPanel2.Size = new System.Drawing.Size(1069, 863);
             this.logoPanel2.TabIndex = 2;
             // 
+            // partyList
+            // 
+            this.partyList.BackColor = System.Drawing.SystemColors.InfoText;
+            this.partyList.DataSource = this.partiesBindingSource;
+            this.partyList.DisplayMember = "Party Name";
+            this.partyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.partyList.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.partyList.FormattingEnabled = true;
+            this.partyList.ItemHeight = 29;
+            this.partyList.Location = new System.Drawing.Point(3, 395);
+            this.partyList.Name = "partyList";
+            this.partyList.Size = new System.Drawing.Size(322, 236);
+            this.partyList.TabIndex = 4;
+            this.partyList.Visible = false;
+            // 
+            // partyDatabaseDataSet
+            // 
+            this.partyDatabaseDataSet.DataSetName = "PartyDatabaseDataSet";
+            this.partyDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // partiesBindingSource
+            // 
+            this.partiesBindingSource.DataMember = "Parties";
+            this.partiesBindingSource.DataSource = this.partyDatabaseDataSet;
+            // 
+            // partiesTableAdapter
+            // 
+            this.partiesTableAdapter.ClearBeforeFill = true;
+            // 
             // openingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -148,6 +186,8 @@
             this.mainMenuPanel.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +201,9 @@
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel logoPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox partyList;
+        private PartyDatabaseDataSet partyDatabaseDataSet;
+        private System.Windows.Forms.BindingSource partiesBindingSource;
+        private PartyDatabaseDataSetTableAdapters.PartiesTableAdapter partiesTableAdapter;
     }
 }
