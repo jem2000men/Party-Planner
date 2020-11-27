@@ -95,7 +95,6 @@
             // 
             // logoPanel
             // 
-            this.logoPanel.BackgroundImage = global::Party_Planner_Application.Properties.Resources.LogoHat;
             this.logoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
@@ -106,7 +105,6 @@
             // logoPanel2
             // 
             this.logoPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.logoPanel2.BackgroundImage = global::Party_Planner_Application.Properties.Resources.LogoHat2;
             this.logoPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoPanel2.Location = new System.Drawing.Point(221, 0);
