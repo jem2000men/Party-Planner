@@ -30,7 +30,8 @@ namespace Party_Planner_Application
         private void Party_Form_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'partyDatabaseDataSet.Parties' table. You can move, or remove it, as needed.
-            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            this.partiesTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Parties, currentparty);
+
 
         }
 

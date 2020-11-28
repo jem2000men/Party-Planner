@@ -74,6 +74,9 @@
     <Compile Include="Party Form.Designer.cs">
       <DependentUpon>Party Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartyDatabaseDataSet.cs">
+      <DependentUpon>PartyDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PartyDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
