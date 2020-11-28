@@ -12,9 +12,11 @@ namespace Party_Planner_Application
 {
     public partial class Party_Form : Form
     {
-        public Party_Form()
+        int currentparty;
+        public Party_Form(int currentparty)
         {
             InitializeComponent();
+            this.currentparty = currentparty;
         }
 
         private void partiesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
