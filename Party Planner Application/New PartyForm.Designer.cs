@@ -32,6 +32,7 @@
             System.Windows.Forms.Label party_NameLabel;
             System.Windows.Forms.Label dateLabel;
             System.Windows.Forms.Label locationLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_PartyForm));
             this.party_NameTextBox = new System.Windows.Forms.TextBox();
             this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.locationTextBox = new System.Windows.Forms.TextBox();
@@ -167,6 +168,7 @@
             this.Controls.Add(this.dateDateTimePicker);
             this.Controls.Add(locationLabel);
             this.Controls.Add(this.locationTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "New_PartyForm";
             this.Text = "New_PartyForm";
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).EndInit();
