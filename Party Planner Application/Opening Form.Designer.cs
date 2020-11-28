@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(openingForm));
             this.mainMenuPanel = new System.Windows.Forms.Panel();
             this.partyList = new System.Windows.Forms.ListBox();
             this.partiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -197,6 +198,7 @@
             this.ClientSize = new System.Drawing.Size(1401, 863);
             this.Controls.Add(this.logoPanel2);
             this.Controls.Add(this.mainMenuPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1414, 893);
             this.Name = "openingForm";
             this.Text = "Party Planner";

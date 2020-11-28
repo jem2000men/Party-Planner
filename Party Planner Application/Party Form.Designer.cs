@@ -34,6 +34,11 @@ namespace Party_Planner_Application
             System.Windows.Forms.Label locationLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Party_Form));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.party_NameTextBox = new System.Windows.Forms.TextBox();
+            this.partiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.partyDatabaseDataSet = new Party_Planner_Application.PartyDatabaseDataSet();
+            this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
             this.partyReportButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -45,13 +50,8 @@ namespace Party_Planner_Application
             this.addSupplyButton = new System.Windows.Forms.Button();
             this.supplyLabel = new System.Windows.Forms.Panel();
             this.suppliesLabel2 = new System.Windows.Forms.Label();
-            this.partyDatabaseDataSet = new Party_Planner_Application.PartyDatabaseDataSet();
-            this.partiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partiesTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.PartiesTableAdapter();
             this.tableAdapterManager = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.TableAdapterManager();
-            this.party_NameTextBox = new System.Windows.Forms.TextBox();
-            this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.locationTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -69,15 +69,48 @@ namespace Party_Planner_Application
             dateLabel = new System.Windows.Forms.Label();
             locationLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.guestLabel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.supplyLabel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingNavigator)).BeginInit();
             this.partiesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // party_NameLabel
+            // 
+            party_NameLabel.AutoSize = true;
+            party_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            party_NameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            party_NameLabel.Location = new System.Drawing.Point(77, 64);
+            party_NameLabel.Name = "party_NameLabel";
+            party_NameLabel.Size = new System.Drawing.Size(144, 29);
+            party_NameLabel.TabIndex = 12;
+            party_NameLabel.Text = "Party Name:";
+            // 
+            // dateLabel
+            // 
+            dateLabel.AutoSize = true;
+            dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dateLabel.Location = new System.Drawing.Point(77, 121);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(69, 29);
+            dateLabel.TabIndex = 14;
+            dateLabel.Text = "Date:";
+            // 
+            // locationLabel
+            // 
+            locationLabel.AutoSize = true;
+            locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            locationLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            locationLabel.Location = new System.Drawing.Point(77, 178);
+            locationLabel.Name = "locationLabel";
+            locationLabel.Size = new System.Drawing.Size(110, 29);
+            locationLabel.TabIndex = 16;
+            locationLabel.Text = "Location:";
             // 
             // panel1
             // 
@@ -97,6 +130,43 @@ namespace Party_Planner_Application
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 449);
             this.panel1.TabIndex = 0;
+            // 
+            // party_NameTextBox
+            // 
+            this.party_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partiesBindingSource, "Party Name", true));
+            this.party_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.party_NameTextBox.Location = new System.Drawing.Point(257, 61);
+            this.party_NameTextBox.Name = "party_NameTextBox";
+            this.party_NameTextBox.Size = new System.Drawing.Size(423, 35);
+            this.party_NameTextBox.TabIndex = 13;
+            // 
+            // partiesBindingSource
+            // 
+            this.partiesBindingSource.DataMember = "Parties";
+            this.partiesBindingSource.DataSource = this.partyDatabaseDataSet;
+            // 
+            // partyDatabaseDataSet
+            // 
+            this.partyDatabaseDataSet.DataSetName = "PartyDatabaseDataSet";
+            this.partyDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dateDateTimePicker
+            // 
+            this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.partiesBindingSource, "Date", true));
+            this.dateDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateDateTimePicker.Location = new System.Drawing.Point(257, 121);
+            this.dateDateTimePicker.Name = "dateDateTimePicker";
+            this.dateDateTimePicker.Size = new System.Drawing.Size(423, 35);
+            this.dateDateTimePicker.TabIndex = 15;
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partiesBindingSource, "Location", true));
+            this.locationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationTextBox.Location = new System.Drawing.Point(257, 178);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(423, 35);
+            this.locationTextBox.TabIndex = 17;
             // 
             // partyReportButton
             // 
@@ -252,16 +322,6 @@ namespace Party_Planner_Application
             this.suppliesLabel2.TabIndex = 0;
             this.suppliesLabel2.Text = "Supplies";
             // 
-            // partyDatabaseDataSet
-            // 
-            this.partyDatabaseDataSet.DataSetName = "PartyDatabaseDataSet";
-            this.partyDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // partiesBindingSource
-            // 
-            this.partiesBindingSource.DataMember = "Parties";
-            this.partiesBindingSource.DataSource = this.partyDatabaseDataSet;
-            // 
             // partiesTableAdapter
             // 
             this.partiesTableAdapter.ClearBeforeFill = true;
@@ -274,73 +334,13 @@ namespace Party_Planner_Application
             this.tableAdapterManager.PartiesTableAdapter = this.partiesTableAdapter;
             this.tableAdapterManager.UpdateOrder = Party_Planner_Application.PartyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // party_NameLabel
-            // 
-            party_NameLabel.AutoSize = true;
-            party_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            party_NameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            party_NameLabel.Location = new System.Drawing.Point(77, 64);
-            party_NameLabel.Name = "party_NameLabel";
-            party_NameLabel.Size = new System.Drawing.Size(144, 29);
-            party_NameLabel.TabIndex = 12;
-            party_NameLabel.Text = "Party Name:";
-            // 
-            // party_NameTextBox
-            // 
-            this.party_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partiesBindingSource, "Party Name", true));
-            this.party_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.party_NameTextBox.Location = new System.Drawing.Point(257, 61);
-            this.party_NameTextBox.Name = "party_NameTextBox";
-            this.party_NameTextBox.Size = new System.Drawing.Size(423, 35);
-            this.party_NameTextBox.TabIndex = 13;
-            // 
-            // dateLabel
-            // 
-            dateLabel.AutoSize = true;
-            dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dateLabel.Location = new System.Drawing.Point(77, 121);
-            dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(69, 29);
-            dateLabel.TabIndex = 14;
-            dateLabel.Text = "Date:";
-            // 
-            // dateDateTimePicker
-            // 
-            this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.partiesBindingSource, "Date", true));
-            this.dateDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDateTimePicker.Location = new System.Drawing.Point(257, 121);
-            this.dateDateTimePicker.Name = "dateDateTimePicker";
-            this.dateDateTimePicker.Size = new System.Drawing.Size(423, 35);
-            this.dateDateTimePicker.TabIndex = 15;
-            // 
-            // locationLabel
-            // 
-            locationLabel.AutoSize = true;
-            locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            locationLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            locationLabel.Location = new System.Drawing.Point(77, 178);
-            locationLabel.Name = "locationLabel";
-            locationLabel.Size = new System.Drawing.Size(110, 29);
-            locationLabel.TabIndex = 16;
-            locationLabel.Text = "Location:";
-            // 
-            // locationTextBox
-            // 
-            this.locationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partiesBindingSource, "Location", true));
-            this.locationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTextBox.Location = new System.Drawing.Point(257, 178);
-            this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(423, 35);
-            this.locationTextBox.TabIndex = 17;
-            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -349,13 +349,13 @@ namespace Party_Planner_Application
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -370,14 +370,14 @@ namespace Party_Planner_Application
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -385,7 +385,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -394,13 +394,13 @@ namespace Party_Planner_Application
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -408,7 +408,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
@@ -417,7 +417,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // partiesBindingNavigatorSaveItem
@@ -425,7 +425,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.partiesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("partiesBindingNavigatorSaveItem.Image")));
             this.partiesBindingNavigatorSaveItem.Name = "partiesBindingNavigatorSaveItem";
-            this.partiesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.partiesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.partiesBindingNavigatorSaveItem.Text = "Save Data";
             this.partiesBindingNavigatorSaveItem.Click += new System.EventHandler(this.partiesBindingNavigatorSaveItem_Click);
             // 
@@ -456,7 +456,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.partiesBindingNavigator.Name = "partiesBindingNavigator";
             this.partiesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.partiesBindingNavigator.Size = new System.Drawing.Size(523, 33);
+            this.partiesBindingNavigator.Size = new System.Drawing.Size(523, 38);
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -476,14 +476,14 @@ namespace Party_Planner_Application
             this.Load += new System.EventHandler(this.Party_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.guestLabel.ResumeLayout(false);
             this.guestLabel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.supplyLabel.ResumeLayout(false);
             this.supplyLabel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingNavigator)).EndInit();
             this.partiesBindingNavigator.ResumeLayout(false);
             this.partiesBindingNavigator.PerformLayout();
