@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(openingForm));
             this.mainMenuPanel = new System.Windows.Forms.Panel();
+            this.openPartybutton = new System.Windows.Forms.Button();
             this.partyList = new System.Windows.Forms.ListBox();
             this.partiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partyDatabaseDataSet = new Party_Planner_Application.PartyDatabaseDataSet();
@@ -41,7 +41,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logoPanel2 = new System.Windows.Forms.Panel();
             this.partiesTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.PartiesTableAdapter();
-            this.openPartybutton = new System.Windows.Forms.Button();
             this.mainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).BeginInit();
@@ -66,6 +65,22 @@
             this.mainMenuPanel.Size = new System.Drawing.Size(332, 863);
             this.mainMenuPanel.TabIndex = 1;
             // 
+            // openPartybutton
+            // 
+            this.openPartybutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.openPartybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.openPartybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openPartybutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.openPartybutton.Location = new System.Drawing.Point(3, 627);
+            this.openPartybutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.openPartybutton.Name = "openPartybutton";
+            this.openPartybutton.Size = new System.Drawing.Size(325, 52);
+            this.openPartybutton.TabIndex = 5;
+            this.openPartybutton.Text = "Open Party";
+            this.openPartybutton.UseVisualStyleBackColor = true;
+            this.openPartybutton.Visible = false;
+            this.openPartybutton.Click += new System.EventHandler(this.openPartybutton_Click);
+            // 
             // partyList
             // 
             this.partyList.BackColor = System.Drawing.SystemColors.InfoText;
@@ -79,6 +94,7 @@
             this.partyList.Name = "partyList";
             this.partyList.Size = new System.Drawing.Size(322, 236);
             this.partyList.TabIndex = 4;
+            this.partyList.ValueMember = "PartyId";
             this.partyList.Visible = false;
             // 
             // partiesBindingSource
@@ -174,22 +190,6 @@
             // 
             this.partiesTableAdapter.ClearBeforeFill = true;
             // 
-            // openPartybutton
-            // 
-            this.openPartybutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.openPartybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openPartybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openPartybutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.openPartybutton.Location = new System.Drawing.Point(3, 627);
-            this.openPartybutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.openPartybutton.Name = "openPartybutton";
-            this.openPartybutton.Size = new System.Drawing.Size(325, 52);
-            this.openPartybutton.TabIndex = 5;
-            this.openPartybutton.Text = "Open Party";
-            this.openPartybutton.UseVisualStyleBackColor = true;
-            this.openPartybutton.Visible = false;
-            this.openPartybutton.Click += new System.EventHandler(this.openPartybutton_Click);
-            // 
             // openingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -198,7 +198,6 @@
             this.ClientSize = new System.Drawing.Size(1401, 863);
             this.Controls.Add(this.logoPanel2);
             this.Controls.Add(this.mainMenuPanel);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1414, 893);
             this.Name = "openingForm";
             this.Text = "Party Planner";
@@ -221,10 +220,10 @@
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Panel logoPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox partyList;
         private PartyDatabaseDataSet partyDatabaseDataSet;
         private System.Windows.Forms.BindingSource partiesBindingSource;
         private PartyDatabaseDataSetTableAdapters.PartiesTableAdapter partiesTableAdapter;
         private System.Windows.Forms.Button openPartybutton;
+        private System.Windows.Forms.ListBox partyList;
     }
 }

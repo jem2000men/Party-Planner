@@ -52,6 +52,7 @@ namespace Party_Planner_Application
 
         private void openPartybutton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(partyList.SelectedItem.ToString());
             Party_Form partyForm = new Party_Form();
             partyForm.ShowDialog();
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
