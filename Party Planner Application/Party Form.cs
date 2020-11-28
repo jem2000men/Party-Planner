@@ -44,7 +44,7 @@ namespace Party_Planner_Application
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            this.partiesTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Parties, currentparty);
         }
     }
 }

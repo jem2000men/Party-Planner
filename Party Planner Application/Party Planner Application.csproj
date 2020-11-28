@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Guest.cs" />
+    <Compile Include="New PartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New PartyForm.Designer.cs">
+      <DependentUpon>New PartyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opening Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="New PartyForm.resx">
+      <DependentUpon>New PartyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Opening Form.resx">
       <DependentUpon>Opening Form.cs</DependentUpon>
     </EmbeddedResource>

@@ -19,6 +19,7 @@ namespace Party_Planner_Application
 
         private void openingForm_Load(object sender, EventArgs e)
         {
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
         }
 
         private void calenderButton_Click(object sender, EventArgs e)
@@ -28,13 +29,13 @@ namespace Party_Planner_Application
 
         private void addPartyButton_Click(object sender, EventArgs e)
         {
-
-
+            New_PartyForm newPForm = new New_PartyForm();
+            newPForm.ShowDialog();
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
         }
 
         private void parttyListButton_Click(object sender, EventArgs e)
         {
-            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             if (partyList.Visible == false)
             {
                 partyList.Visible = true;

@@ -225,7 +225,7 @@ namespace Party_Planner_Application
             this.panel2.Location = new System.Drawing.Point(0, 449);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 440);
+            this.panel2.Size = new System.Drawing.Size(702, 466);
             this.panel2.TabIndex = 1;
             // 
             // addGuestButton
@@ -279,7 +279,7 @@ namespace Party_Planner_Application
             this.panel3.Location = new System.Drawing.Point(1225, 449);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(699, 440);
+            this.panel3.Size = new System.Drawing.Size(699, 466);
             this.panel3.TabIndex = 2;
             // 
             // addSupplyButton
@@ -341,7 +341,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -350,19 +350,18 @@ namespace Party_Planner_Application
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -371,14 +370,14 @@ namespace Party_Planner_Application
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -386,7 +385,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -395,13 +394,13 @@ namespace Party_Planner_Application
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -409,7 +408,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
@@ -418,7 +417,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // partiesBindingNavigatorSaveItem
@@ -426,7 +425,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.partiesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("partiesBindingNavigatorSaveItem.Image")));
             this.partiesBindingNavigatorSaveItem.Name = "partiesBindingNavigatorSaveItem";
-            this.partiesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.partiesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.partiesBindingNavigatorSaveItem.Text = "Save Data";
             this.partiesBindingNavigatorSaveItem.Click += new System.EventHandler(this.partiesBindingNavigatorSaveItem_Click);
             // 
@@ -457,7 +456,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.partiesBindingNavigator.Name = "partiesBindingNavigator";
             this.partiesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.partiesBindingNavigator.Size = new System.Drawing.Size(523, 38);
+            this.partiesBindingNavigator.Size = new System.Drawing.Size(523, 33);
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -467,7 +466,7 @@ namespace Party_Planner_Application
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1924, 889);
+            this.ClientSize = new System.Drawing.Size(1924, 915);
             this.Controls.Add(this.partiesBindingNavigator);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
