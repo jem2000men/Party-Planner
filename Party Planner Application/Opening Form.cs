@@ -12,7 +12,6 @@ namespace Party_Planner_Application
 {
     public partial class openingForm : Form
     {
-        bool fistBox = true;
         public openingForm()
         {
             InitializeComponent();
@@ -39,24 +38,23 @@ namespace Party_Planner_Application
         {
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             if (partyList.Visible == false)
+            {
                 partyList.Visible = true;
+                openPartybutton.Visible = true;
+            }
             else
+            {
                 partyList.Visible = false;
+                openPartybutton.Visible = false;
+            }
         }
 
-        private void partyList_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void openPartybutton_Click(object sender, EventArgs e)
         {
-            if (fistBox == true)
-            {
-                fistBox = false;
-            }
-            else
-            {
-                fistBox = true;
-                Party_Form partyForm = new Party_Form();
-                partyForm.ShowDialog();
-                this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
-            }
+            Party_Form partyForm = new Party_Form();
+            partyForm.ShowDialog();
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
         }
     }
 }
