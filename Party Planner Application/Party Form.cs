@@ -38,5 +38,10 @@ namespace Party_Planner_Application
             this.partiesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+        }
     }
 }
