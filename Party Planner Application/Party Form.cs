@@ -37,9 +37,16 @@ namespace Party_Planner_Application
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.partiesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+            try
+            {
+                this.Validate();
+                this.partiesBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Update Failed. Please try again...");
+            }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
