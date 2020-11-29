@@ -93,8 +93,13 @@ namespace Party_Planner_Application
                 this.Validate();
                 this.itemsBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+                ItemTextBox.Text = "";
                 
             }
+        }
+
+        private void ViewDetailsButton_Click(object sender, EventArgs e)
+        {
         }
     }
 }
