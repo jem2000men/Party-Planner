@@ -56,10 +56,9 @@
             party_NameLabel.AutoSize = true;
             party_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             party_NameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            party_NameLabel.Location = new System.Drawing.Point(57, 104);
-            party_NameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            party_NameLabel.Location = new System.Drawing.Point(86, 160);
             party_NameLabel.Name = "party_NameLabel";
-            party_NameLabel.Size = new System.Drawing.Size(95, 20);
+            party_NameLabel.Size = new System.Drawing.Size(144, 29);
             party_NameLabel.TabIndex = 18;
             party_NameLabel.Text = "Party Name:";
             // 
@@ -68,10 +67,9 @@
             dateLabel.AutoSize = true;
             dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dateLabel.Location = new System.Drawing.Point(57, 141);
-            dateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            dateLabel.Location = new System.Drawing.Point(86, 217);
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(48, 20);
+            dateLabel.Size = new System.Drawing.Size(69, 29);
             dateLabel.TabIndex = 20;
             dateLabel.Text = "Date:";
             // 
@@ -80,57 +78,51 @@
             locationLabel.AutoSize = true;
             locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             locationLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            locationLabel.Location = new System.Drawing.Point(57, 178);
-            locationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            locationLabel.Location = new System.Drawing.Point(86, 274);
             locationLabel.Name = "locationLabel";
-            locationLabel.Size = new System.Drawing.Size(74, 20);
+            locationLabel.Size = new System.Drawing.Size(110, 29);
             locationLabel.TabIndex = 22;
             locationLabel.Text = "Location:";
             // 
             // party_NameTextBox
             // 
             this.party_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.party_NameTextBox.Location = new System.Drawing.Point(177, 102);
-            this.party_NameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.party_NameTextBox.Location = new System.Drawing.Point(266, 157);
             this.party_NameTextBox.Name = "party_NameTextBox";
-            this.party_NameTextBox.Size = new System.Drawing.Size(283, 26);
+            this.party_NameTextBox.Size = new System.Drawing.Size(422, 35);
             this.party_NameTextBox.TabIndex = 19;
             // 
             // dateDateTimePicker
             // 
             this.dateDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDateTimePicker.Location = new System.Drawing.Point(177, 141);
-            this.dateDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateDateTimePicker.Location = new System.Drawing.Point(266, 217);
             this.dateDateTimePicker.Name = "dateDateTimePicker";
-            this.dateDateTimePicker.Size = new System.Drawing.Size(283, 26);
+            this.dateDateTimePicker.Size = new System.Drawing.Size(422, 35);
             this.dateDateTimePicker.TabIndex = 21;
             // 
             // locationTextBox
             // 
             this.locationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTextBox.Location = new System.Drawing.Point(177, 178);
-            this.locationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.locationTextBox.Location = new System.Drawing.Point(266, 274);
             this.locationTextBox.Name = "locationTextBox";
-            this.locationTextBox.Size = new System.Drawing.Size(283, 26);
+            this.locationTextBox.Size = new System.Drawing.Size(422, 35);
             this.locationTextBox.TabIndex = 23;
             // 
             // NewPartyLabel
             // 
             this.NewPartyLabel.AutoSize = true;
             this.NewPartyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPartyLabel.Location = new System.Drawing.Point(111, 41);
-            this.NewPartyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NewPartyLabel.Location = new System.Drawing.Point(166, 63);
             this.NewPartyLabel.Name = "NewPartyLabel";
-            this.NewPartyLabel.Size = new System.Drawing.Size(309, 26);
+            this.NewPartyLabel.Size = new System.Drawing.Size(451, 37);
             this.NewPartyLabel.TabIndex = 24;
             this.NewPartyLabel.Text = "Please Enter Party Information";
             // 
             // AddPartyButton
             // 
-            this.AddPartyButton.Location = new System.Drawing.Point(261, 226);
-            this.AddPartyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddPartyButton.Location = new System.Drawing.Point(392, 348);
             this.AddPartyButton.Name = "AddPartyButton";
-            this.AddPartyButton.Size = new System.Drawing.Size(119, 37);
+            this.AddPartyButton.Size = new System.Drawing.Size(178, 57);
             this.AddPartyButton.TabIndex = 25;
             this.AddPartyButton.Text = "Add Party";
             this.AddPartyButton.UseVisualStyleBackColor = true;
@@ -165,9 +157,10 @@
             // 
             // New_PartyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.AddPartyButton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.AddPartyButton);
             this.Controls.Add(this.NewPartyLabel);
             this.Controls.Add(party_NameLabel);
@@ -177,7 +170,6 @@
             this.Controls.Add(locationLabel);
             this.Controls.Add(this.locationTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "New_PartyForm";
             this.Text = "New_PartyForm";
             this.Load += new System.EventHandler(this.New_PartyForm_Load);
