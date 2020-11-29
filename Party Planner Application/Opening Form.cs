@@ -20,6 +20,7 @@ namespace Party_Planner_Application
         private void openingForm_Load(object sender, EventArgs e)
         {
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            boldCalendarDates();
         }
 
         private void calenderButton_Click(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace Party_Planner_Application
             newPForm.ShowDialog();
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             partyList.SelectedIndex = -1;
+            boldCalendarDates();
         }
 
         private void parttyListButton_Click(object sender, EventArgs e)
@@ -63,6 +65,24 @@ namespace Party_Planner_Application
             {
                 MessageBox.Show("Please pick a party first!");
             }
+        }
+        private void boldCalendarDates()
+        {
+            datesListBox.SelectedIndex = -1;
+            for (int i = 0; i < datesListBox.Items.Count; i++)
+            {
+                try
+                {
+                    datesListBox.SelectedIndex += 1;
+                    partyCalendar.AddBoldedDate(DateTime.Parse(datesListBox.SelectedValue.ToString()));
+                    partyCalendar.UpdateBoldedDates();
+                }
+                catch(System.Exception ex)
+                {
+
+                }
+            }
+            partyCalendar.UpdateBoldedDates();
         }
     }
 }
