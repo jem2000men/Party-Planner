@@ -214,10 +214,10 @@
             this.partyBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partyBox.FormattingEnabled = true;
             this.partyBox.ItemHeight = 25;
-            this.partyBox.Location = new System.Drawing.Point(225, 372);
+            this.partyBox.Location = new System.Drawing.Point(173, 372);
             this.partyBox.Name = "partyBox";
             this.partyBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.partyBox.Size = new System.Drawing.Size(223, 275);
+            this.partyBox.Size = new System.Drawing.Size(312, 275);
             this.partyBox.TabIndex = 3;
             this.partyBox.ValueMember = "Date";
             this.partyBox.Visible = false;
