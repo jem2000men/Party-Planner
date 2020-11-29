@@ -42,11 +42,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logoPanel2 = new System.Windows.Forms.Panel();
             this.partiesTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.PartiesTableAdapter();
+            this.partyCalendar = new System.Windows.Forms.MonthCalendar();
+            this.dateDetailsLabel = new System.Windows.Forms.Label();
+            this.datesListBox = new System.Windows.Forms.ListBox();
             this.mainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).BeginInit();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.logoPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuPanel
@@ -61,9 +65,8 @@
             this.mainMenuPanel.Controls.Add(this.logoPanel);
             this.mainMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainMenuPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainMenuPanel.Name = "mainMenuPanel";
-            this.mainMenuPanel.Size = new System.Drawing.Size(332, 863);
+            this.mainMenuPanel.Size = new System.Drawing.Size(221, 456);
             this.mainMenuPanel.TabIndex = 1;
             // 
             // openPartybutton
@@ -71,10 +74,9 @@
             this.openPartybutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.openPartybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openPartybutton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.openPartybutton.Location = new System.Drawing.Point(3, 627);
-            this.openPartybutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.openPartybutton.Location = new System.Drawing.Point(2, 408);
             this.openPartybutton.Name = "openPartybutton";
-            this.openPartybutton.Size = new System.Drawing.Size(322, 52);
+            this.openPartybutton.Size = new System.Drawing.Size(215, 34);
             this.openPartybutton.TabIndex = 5;
             this.openPartybutton.Text = "Open Party";
             this.openPartybutton.UseVisualStyleBackColor = true;
@@ -89,10 +91,11 @@
             this.partyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partyList.ForeColor = System.Drawing.SystemColors.ControlText;
             this.partyList.FormattingEnabled = true;
-            this.partyList.ItemHeight = 29;
-            this.partyList.Location = new System.Drawing.Point(3, 395);
+            this.partyList.ItemHeight = 20;
+            this.partyList.Location = new System.Drawing.Point(2, 257);
+            this.partyList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.partyList.Name = "partyList";
-            this.partyList.Size = new System.Drawing.Size(322, 236);
+            this.partyList.Size = new System.Drawing.Size(216, 144);
             this.partyList.TabIndex = 4;
             this.partyList.ValueMember = "PartyId";
             this.partyList.Visible = false;
@@ -114,10 +117,9 @@
             this.parttyListButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.parttyListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parttyListButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.parttyListButton.Location = new System.Drawing.Point(0, 310);
-            this.parttyListButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.parttyListButton.Location = new System.Drawing.Point(0, 202);
             this.parttyListButton.Name = "parttyListButton";
-            this.parttyListButton.Size = new System.Drawing.Size(332, 78);
+            this.parttyListButton.Size = new System.Drawing.Size(221, 51);
             this.parttyListButton.TabIndex = 3;
             this.parttyListButton.Text = "Party List";
             this.parttyListButton.UseVisualStyleBackColor = false;
@@ -130,10 +132,9 @@
             this.addPartyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addPartyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPartyButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.addPartyButton.Location = new System.Drawing.Point(0, 232);
-            this.addPartyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addPartyButton.Location = new System.Drawing.Point(0, 151);
             this.addPartyButton.Name = "addPartyButton";
-            this.addPartyButton.Size = new System.Drawing.Size(332, 78);
+            this.addPartyButton.Size = new System.Drawing.Size(221, 51);
             this.addPartyButton.TabIndex = 2;
             this.addPartyButton.Text = "Add Party";
             this.addPartyButton.UseVisualStyleBackColor = false;
@@ -146,10 +147,9 @@
             this.calendarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.calendarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calendarButton.Location = new System.Drawing.Point(0, 154);
-            this.calendarButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.calendarButton.Location = new System.Drawing.Point(0, 100);
             this.calendarButton.Name = "calendarButton";
-            this.calendarButton.Size = new System.Drawing.Size(332, 78);
+            this.calendarButton.Size = new System.Drawing.Size(221, 51);
             this.calendarButton.TabIndex = 1;
             this.calendarButton.Text = "Calendar";
             this.calendarButton.UseVisualStyleBackColor = false;
@@ -161,18 +161,18 @@
             this.logoPanel.Controls.Add(this.pictureBox1);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
-            this.logoPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logoPanel.Name = "logoPanel";
-            this.logoPanel.Size = new System.Drawing.Size(332, 154);
+            this.logoPanel.Size = new System.Drawing.Size(221, 100);
             this.logoPanel.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Aqua;
             this.pictureBox1.Image = global::Party_Planner_Application.Properties.Resources.LogoHat;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(213, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -181,27 +181,57 @@
             // 
             this.logoPanel2.BackColor = System.Drawing.SystemColors.Menu;
             this.logoPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoPanel2.Controls.Add(this.datesListBox);
+            this.logoPanel2.Controls.Add(this.dateDetailsLabel);
+            this.logoPanel2.Controls.Add(this.partyCalendar);
             this.logoPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPanel2.Location = new System.Drawing.Point(332, 0);
-            this.logoPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.logoPanel2.Location = new System.Drawing.Point(221, 0);
             this.logoPanel2.Name = "logoPanel2";
-            this.logoPanel2.Size = new System.Drawing.Size(1069, 863);
+            this.logoPanel2.Size = new System.Drawing.Size(635, 456);
             this.logoPanel2.TabIndex = 2;
             // 
             // partiesTableAdapter
             // 
             this.partiesTableAdapter.ClearBeforeFill = true;
             // 
+            // partyCalendar
+            // 
+            this.partyCalendar.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.partyCalendar.Location = new System.Drawing.Point(105, 33);
+            this.partyCalendar.Name = "partyCalendar";
+            this.partyCalendar.ShowToday = false;
+            this.partyCalendar.TabIndex = 0;
+            // 
+            // dateDetailsLabel
+            // 
+            this.dateDetailsLabel.Location = new System.Drawing.Point(105, 353);
+            this.dateDetailsLabel.Name = "dateDetailsLabel";
+            this.dateDetailsLabel.Size = new System.Drawing.Size(458, 60);
+            this.dateDetailsLabel.TabIndex = 1;
+            this.dateDetailsLabel.Text = "label1";
+            // 
+            // datesListBox
+            // 
+            this.datesListBox.DataSource = this.partiesBindingSource;
+            this.datesListBox.DisplayMember = "Date";
+            this.datesListBox.FormattingEnabled = true;
+            this.datesListBox.Location = new System.Drawing.Point(6, 77);
+            this.datesListBox.Name = "datesListBox";
+            this.datesListBox.Size = new System.Drawing.Size(87, 95);
+            this.datesListBox.TabIndex = 2;
+            this.datesListBox.ValueMember = "Date";
+            // 
             // openingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1401, 863);
+            this.ClientSize = new System.Drawing.Size(856, 456);
             this.Controls.Add(this.logoPanel2);
             this.Controls.Add(this.mainMenuPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1414, 893);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(857, 454);
             this.Name = "openingForm";
             this.Text = "Party Planner";
             this.Load += new System.EventHandler(this.openingForm_Load);
@@ -210,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).EndInit();
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.logoPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,5 +259,8 @@
         private PartyDatabaseDataSetTableAdapters.PartiesTableAdapter partiesTableAdapter;
         private System.Windows.Forms.Button openPartybutton;
         private System.Windows.Forms.ListBox partyList;
+        private System.Windows.Forms.MonthCalendar partyCalendar;
+        private System.Windows.Forms.Label dateDetailsLabel;
+        private System.Windows.Forms.ListBox datesListBox;
     }
 }
