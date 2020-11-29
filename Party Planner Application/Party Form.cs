@@ -29,6 +29,8 @@ namespace Party_Planner_Application
 
         private void Party_Form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Guests' table. You can move, or remove it, as needed.
+            this.guestsTableAdapter.Fill(this.partyDatabaseDataSet.Guests);
             // TODO: This line of code loads data into the 'partyDatabaseDataSet.Parties' table. You can move, or remove it, as needed.
             this.partiesTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Parties, currentparty);
 
@@ -52,6 +54,13 @@ namespace Party_Planner_Application
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.partiesTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Parties, currentparty);
+        }
+
+        private void addGuestButton_Click(object sender, EventArgs e)
+        {
+            NewGuestForm newForm = new NewGuestForm(currentparty);
+            newForm.ShowDialog();
+            this.guestsTableAdapter.Fill(this.partyDatabaseDataSet.Guests);
         }
     }
 }

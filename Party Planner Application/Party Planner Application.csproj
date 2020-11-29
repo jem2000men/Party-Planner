@@ -68,6 +68,12 @@
     <Compile Include="New PartyForm.Designer.cs">
       <DependentUpon>New PartyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewGuestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGuestForm.Designer.cs">
+      <DependentUpon>NewGuestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opening Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="New PartyForm.resx">
       <DependentUpon>New PartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGuestForm.resx">
+      <DependentUpon>NewGuestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Opening Form.resx">
       <DependentUpon>Opening Form.cs</DependentUpon>

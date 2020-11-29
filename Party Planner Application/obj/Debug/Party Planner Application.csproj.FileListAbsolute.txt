@@ -13,3 +13,18 @@ C:\Users\charl\Desktop\Party-Planner-main-V2\Party Planner Application\bin\Debug
 C:\Users\charl\Desktop\Party-Planner-main-V2\Party Planner Application\bin\Debug\Party Planner Application.exe
 C:\Users\charl\Desktop\Party-Planner-main-V2\Party Planner Application\bin\Debug\Party Planner Application.pdb
 C:\Users\charl\Desktop\Party-Planner-main-V2\Party Planner Application\obj\Debug\Party_Planner_Application.NewGuestForm.resources
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\PartyDatabase.mdf
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\PartyDatabase_log.ldf
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Party Planner Application.exe.config
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Party Planner Application.exe
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Party Planner Application.pdb
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.csprojAssemblyReference.cache
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party_Planner_Application.New_PartyForm.resources
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party_Planner_Application.NewGuestForm.resources
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party_Planner_Application.openingForm.resources
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party_Planner_Application.Party_Form.resources
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party_Planner_Application.Properties.Resources.resources
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.csproj.GenerateResource.cache
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.csproj.CoreCompileInputs.cache
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.exe
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.pdb
