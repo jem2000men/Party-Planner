@@ -52,7 +52,7 @@
             // mainMenuPanel
             // 
             this.mainMenuPanel.AutoScroll = true;
-            this.mainMenuPanel.BackColor = System.Drawing.Color.Black;
+            this.mainMenuPanel.BackColor = System.Drawing.SystemColors.Control;
             this.mainMenuPanel.Controls.Add(this.openPartybutton);
             this.mainMenuPanel.Controls.Add(this.partyList);
             this.mainMenuPanel.Controls.Add(this.parttyListButton);
@@ -71,7 +71,7 @@
             this.openPartybutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.openPartybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openPartybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openPartybutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.openPartybutton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.openPartybutton.Location = new System.Drawing.Point(3, 627);
             this.openPartybutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.openPartybutton.Name = "openPartybutton";
@@ -84,11 +84,11 @@
             // 
             // partyList
             // 
-            this.partyList.BackColor = System.Drawing.SystemColors.InfoText;
+            this.partyList.BackColor = System.Drawing.SystemColors.Control;
             this.partyList.DataSource = this.partiesBindingSource;
             this.partyList.DisplayMember = "Party Name";
             this.partyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partyList.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.partyList.ForeColor = System.Drawing.SystemColors.ControlText;
             this.partyList.FormattingEnabled = true;
             this.partyList.ItemHeight = 29;
             this.partyList.Location = new System.Drawing.Point(3, 395);
@@ -110,53 +110,57 @@
             // 
             // parttyListButton
             // 
+            this.parttyListButton.BackColor = System.Drawing.SystemColors.Control;
             this.parttyListButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.parttyListButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.parttyListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.parttyListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.parttyListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.parttyListButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.parttyListButton.Location = new System.Drawing.Point(0, 310);
             this.parttyListButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.parttyListButton.Name = "parttyListButton";
             this.parttyListButton.Size = new System.Drawing.Size(332, 78);
             this.parttyListButton.TabIndex = 3;
             this.parttyListButton.Text = "Party List";
-            this.parttyListButton.UseVisualStyleBackColor = true;
+            this.parttyListButton.UseVisualStyleBackColor = false;
             this.parttyListButton.Click += new System.EventHandler(this.parttyListButton_Click);
             // 
             // addPartyButton
             // 
+            this.addPartyButton.BackColor = System.Drawing.SystemColors.Control;
             this.addPartyButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.addPartyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.addPartyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPartyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPartyButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addPartyButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.addPartyButton.Location = new System.Drawing.Point(0, 232);
             this.addPartyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addPartyButton.Name = "addPartyButton";
             this.addPartyButton.Size = new System.Drawing.Size(332, 78);
             this.addPartyButton.TabIndex = 2;
             this.addPartyButton.Text = "Add Party";
-            this.addPartyButton.UseVisualStyleBackColor = true;
+            this.addPartyButton.UseVisualStyleBackColor = false;
             this.addPartyButton.Click += new System.EventHandler(this.addPartyButton_Click);
             // 
             // calendarButton
             // 
+            this.calendarButton.BackColor = System.Drawing.SystemColors.Control;
             this.calendarButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.calendarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.calendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calendarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendarButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.calendarButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.calendarButton.Location = new System.Drawing.Point(0, 154);
             this.calendarButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.calendarButton.Name = "calendarButton";
             this.calendarButton.Size = new System.Drawing.Size(332, 78);
             this.calendarButton.TabIndex = 1;
             this.calendarButton.Text = "Calendar";
-            this.calendarButton.UseVisualStyleBackColor = true;
+            this.calendarButton.UseVisualStyleBackColor = false;
             // 
             // logoPanel
             // 
+            this.logoPanel.BackColor = System.Drawing.Color.Aqua;
             this.logoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoPanel.Controls.Add(this.pictureBox1);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -168,6 +172,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Aqua;
             this.pictureBox1.Image = global::Party_Planner_Application.Properties.Resources.LogoHat;
             this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -178,7 +183,7 @@
             // 
             // logoPanel2
             // 
-            this.logoPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.logoPanel2.BackColor = System.Drawing.SystemColors.Menu;
             this.logoPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoPanel2.Location = new System.Drawing.Point(332, 0);
