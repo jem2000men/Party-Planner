@@ -94,6 +94,7 @@ namespace Party_Planner_Application
                 this.itemsBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
                 ItemTextBox.Text = "";
+                ItemBox.SelectedIndex = -1;
                 
             }
         }

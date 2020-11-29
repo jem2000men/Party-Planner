@@ -69,13 +69,12 @@
             // openPartybutton
             // 
             this.openPartybutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.openPartybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openPartybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openPartybutton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.openPartybutton.Location = new System.Drawing.Point(3, 627);
             this.openPartybutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.openPartybutton.Name = "openPartybutton";
-            this.openPartybutton.Size = new System.Drawing.Size(325, 52);
+            this.openPartybutton.Size = new System.Drawing.Size(322, 52);
             this.openPartybutton.TabIndex = 5;
             this.openPartybutton.Text = "Open Party";
             this.openPartybutton.UseVisualStyleBackColor = true;
@@ -113,7 +112,6 @@
             this.parttyListButton.BackColor = System.Drawing.SystemColors.Control;
             this.parttyListButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.parttyListButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.parttyListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.parttyListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parttyListButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.parttyListButton.Location = new System.Drawing.Point(0, 310);
@@ -130,7 +128,6 @@
             this.addPartyButton.BackColor = System.Drawing.SystemColors.Control;
             this.addPartyButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.addPartyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.addPartyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPartyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPartyButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.addPartyButton.Location = new System.Drawing.Point(0, 232);
@@ -147,7 +144,6 @@
             this.calendarButton.BackColor = System.Drawing.SystemColors.Control;
             this.calendarButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.calendarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.calendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calendarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.calendarButton.Location = new System.Drawing.Point(0, 154);

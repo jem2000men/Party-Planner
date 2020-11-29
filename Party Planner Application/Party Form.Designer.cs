@@ -103,8 +103,9 @@ namespace Party_Planner_Application
             // party_NameLabel
             // 
             party_NameLabel.AutoSize = true;
+            party_NameLabel.BackColor = System.Drawing.SystemColors.Control;
             party_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            party_NameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            party_NameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             party_NameLabel.Location = new System.Drawing.Point(77, 64);
             party_NameLabel.Name = "party_NameLabel";
             party_NameLabel.Size = new System.Drawing.Size(144, 29);
@@ -114,8 +115,9 @@ namespace Party_Planner_Application
             // dateLabel
             // 
             dateLabel.AutoSize = true;
+            dateLabel.BackColor = System.Drawing.SystemColors.Control;
             dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dateLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             dateLabel.Location = new System.Drawing.Point(77, 121);
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new System.Drawing.Size(69, 29);
@@ -125,8 +127,9 @@ namespace Party_Planner_Application
             // locationLabel
             // 
             locationLabel.AutoSize = true;
+            locationLabel.BackColor = System.Drawing.SystemColors.Control;
             locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            locationLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            locationLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             locationLabel.Location = new System.Drawing.Point(77, 178);
             locationLabel.Name = "locationLabel";
             locationLabel.Size = new System.Drawing.Size(110, 29);
@@ -137,7 +140,7 @@ namespace Party_Planner_Application
             // 
             first_NameLabel.AutoSize = true;
             first_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            first_NameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            first_NameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             first_NameLabel.Location = new System.Drawing.Point(336, 190);
             first_NameLabel.Name = "first_NameLabel";
             first_NameLabel.Size = new System.Drawing.Size(137, 29);
@@ -148,7 +151,7 @@ namespace Party_Planner_Application
             // 
             last_NameLabel.AutoSize = true;
             last_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            last_NameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            last_NameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             last_NameLabel.Location = new System.Drawing.Point(336, 268);
             last_NameLabel.Name = "last_NameLabel";
             last_NameLabel.Size = new System.Drawing.Size(134, 29);
@@ -159,7 +162,7 @@ namespace Party_Planner_Application
             // 
             itemLabel.AutoSize = true;
             itemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            itemLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            itemLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             itemLabel.Location = new System.Drawing.Point(336, 344);
             itemLabel.Name = "itemLabel";
             itemLabel.Size = new System.Drawing.Size(65, 29);
@@ -168,7 +171,7 @@ namespace Party_Planner_Application
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(party_NameLabel);
             this.panel1.Controls.Add(this.party_NameTextBox);
             this.panel1.Controls.Add(dateLabel);
@@ -225,10 +228,9 @@ namespace Party_Planner_Application
             // partyReportButton
             // 
             this.partyReportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.partyReportButton.BackColor = System.Drawing.Color.Black;
+            this.partyReportButton.BackColor = System.Drawing.SystemColors.Control;
             this.partyReportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.partyReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.partyReportButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.partyReportButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.partyReportButton.Location = new System.Drawing.Point(1561, 268);
             this.partyReportButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.partyReportButton.Name = "partyReportButton";
@@ -240,10 +242,9 @@ namespace Party_Planner_Application
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.Color.Black;
+            this.cancelButton.BackColor = System.Drawing.SystemColors.Control;
             this.cancelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cancelButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cancelButton.Location = new System.Drawing.Point(1561, 80);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancelButton.Name = "cancelButton";
@@ -256,10 +257,9 @@ namespace Party_Planner_Application
             // saveButton
             // 
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveButton.BackColor = System.Drawing.Color.Black;
+            this.saveButton.BackColor = System.Drawing.SystemColors.Control;
             this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.saveButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.saveButton.Location = new System.Drawing.Point(1561, -2);
             this.saveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveButton.Name = "saveButton";
@@ -272,7 +272,7 @@ namespace Party_Planner_Application
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(itemLabel);
             this.panel2.Controls.Add(this.itemLabel1);
             this.panel2.Controls.Add(last_NameLabel);
@@ -294,7 +294,7 @@ namespace Party_Planner_Application
             // 
             this.itemLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.guestsBindingSource, "Item", true));
             this.itemLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.itemLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.itemLabel1.Location = new System.Drawing.Point(476, 344);
             this.itemLabel1.Name = "itemLabel1";
             this.itemLabel1.Size = new System.Drawing.Size(185, 29);
@@ -310,7 +310,7 @@ namespace Party_Planner_Application
             // 
             this.last_NameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.guestsBindingSource, "Last Name", true));
             this.last_NameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last_NameLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.last_NameLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.last_NameLabel1.Location = new System.Drawing.Point(476, 268);
             this.last_NameLabel1.Name = "last_NameLabel1";
             this.last_NameLabel1.Size = new System.Drawing.Size(185, 33);
@@ -321,7 +321,7 @@ namespace Party_Planner_Application
             // 
             this.first_NameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.guestsBindingSource, "First Name", true));
             this.first_NameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.first_NameLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.first_NameLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.first_NameLabel1.Location = new System.Drawing.Point(479, 190);
             this.first_NameLabel1.Name = "first_NameLabel1";
             this.first_NameLabel1.Size = new System.Drawing.Size(190, 29);
@@ -330,14 +330,13 @@ namespace Party_Planner_Application
             // 
             // manageGuestButton
             // 
-            this.manageGuestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.manageGuestButton.BackColor = System.Drawing.SystemColors.Control;
             this.manageGuestButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.manageGuestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageGuestButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.manageGuestButton.Location = new System.Drawing.Point(12, 388);
+            this.manageGuestButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.manageGuestButton.Location = new System.Drawing.Point(0, 388);
             this.manageGuestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.manageGuestButton.Name = "manageGuestButton";
-            this.manageGuestButton.Size = new System.Drawing.Size(649, 64);
+            this.manageGuestButton.Size = new System.Drawing.Size(702, 64);
             this.manageGuestButton.TabIndex = 13;
             this.manageGuestButton.Text = "Manage Guest";
             this.manageGuestButton.UseVisualStyleBackColor = false;
@@ -345,11 +344,11 @@ namespace Party_Planner_Application
             // 
             // guestListBox
             // 
-            this.guestListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.guestListBox.BackColor = System.Drawing.SystemColors.Control;
             this.guestListBox.DataSource = this.guestsBindingSource;
             this.guestListBox.DisplayMember = "First Name";
             this.guestListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestListBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guestListBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guestListBox.FormattingEnabled = true;
             this.guestListBox.ItemHeight = 29;
             this.guestListBox.Location = new System.Drawing.Point(12, 173);
@@ -360,11 +359,10 @@ namespace Party_Planner_Application
             // 
             // addGuestButton
             // 
-            this.addGuestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.addGuestButton.BackColor = System.Drawing.SystemColors.Control;
             this.addGuestButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.addGuestButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.addGuestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addGuestButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addGuestButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.addGuestButton.Location = new System.Drawing.Point(0, 80);
             this.addGuestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addGuestButton.Name = "addGuestButton";
@@ -376,10 +374,10 @@ namespace Party_Planner_Application
             // 
             // guestLabel
             // 
-            this.guestLabel.BackColor = System.Drawing.Color.Black;
+            this.guestLabel.BackColor = System.Drawing.SystemColors.Control;
             this.guestLabel.Controls.Add(this.guestsLabel2);
             this.guestLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guestLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guestLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guestLabel.Location = new System.Drawing.Point(0, 0);
             this.guestLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guestLabel.Name = "guestLabel";
@@ -403,13 +401,14 @@ namespace Party_Planner_Application
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.AddItemButton);
             this.panel3.Controls.Add(this.ItemTextBox);
             this.panel3.Controls.Add(this.ItemBox);
             this.panel3.Controls.Add(this.addSupplyButton);
             this.panel3.Controls.Add(this.supplyLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel3.Location = new System.Drawing.Point(1225, 449);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
@@ -438,11 +437,11 @@ namespace Party_Planner_Application
             // 
             // ItemBox
             // 
-            this.ItemBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.ItemBox.BackColor = System.Drawing.SystemColors.Control;
             this.ItemBox.DataSource = this.itemsBindingSource;
             this.ItemBox.DisplayMember = "Item Name";
             this.ItemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ItemBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ItemBox.FormattingEnabled = true;
             this.ItemBox.ItemHeight = 29;
             this.ItemBox.Location = new System.Drawing.Point(20, 216);
@@ -458,11 +457,10 @@ namespace Party_Planner_Application
             // 
             // addSupplyButton
             // 
-            this.addSupplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.addSupplyButton.BackColor = System.Drawing.SystemColors.Control;
             this.addSupplyButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.addSupplyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.addSupplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addSupplyButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addSupplyButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.addSupplyButton.Location = new System.Drawing.Point(0, 80);
             this.addSupplyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addSupplyButton.Name = "addSupplyButton";
@@ -474,10 +472,10 @@ namespace Party_Planner_Application
             // 
             // supplyLabel
             // 
-            this.supplyLabel.BackColor = System.Drawing.Color.Black;
+            this.supplyLabel.BackColor = System.Drawing.SystemColors.Control;
             this.supplyLabel.Controls.Add(this.suppliesLabel2);
             this.supplyLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.supplyLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.supplyLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.supplyLabel.Location = new System.Drawing.Point(0, 0);
             this.supplyLabel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.supplyLabel.Name = "supplyLabel";
@@ -541,7 +539,6 @@ namespace Party_Planner_Application
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";

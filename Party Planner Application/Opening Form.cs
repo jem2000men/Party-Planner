@@ -32,12 +32,14 @@ namespace Party_Planner_Application
             New_PartyForm newPForm = new New_PartyForm();
             newPForm.ShowDialog();
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            partyList.SelectedIndex = -1;
         }
 
         private void parttyListButton_Click(object sender, EventArgs e)
         {
             if (partyList.Visible == false)
             {
+                partyList.SelectedIndex = -1;
                 partyList.Visible = true;
                 openPartybutton.Visible = true;
             }
@@ -51,9 +53,16 @@ namespace Party_Planner_Application
 
         private void openPartybutton_Click(object sender, EventArgs e)
         {
-            Party_Form partyForm = new Party_Form(int.Parse(partyList.SelectedValue.ToString()));
-            partyForm.ShowDialog();
-            this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            try
+            {
+                Party_Form partyForm = new Party_Form(int.Parse(partyList.SelectedValue.ToString()));
+                partyForm.ShowDialog();
+                this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Please pick a party first!");
+            }
         }
     }
 }
