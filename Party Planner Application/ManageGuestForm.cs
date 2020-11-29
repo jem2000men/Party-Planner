@@ -32,7 +32,7 @@ namespace Party_Planner_Application
         private void ManageGuestForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'partyDatabaseDataSet.Items' table. You can move, or remove it, as needed.
-            this.itemsTableAdapter.Fill(this.partyDatabaseDataSet.Items);
+            this.itemsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Items, currentparty);
 
             this.guestsTableAdapter.FillByPartyAndGuest(this.partyDatabaseDataSet.Guests, currentparty, currentguest);
 
