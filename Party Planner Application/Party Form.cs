@@ -97,9 +97,5 @@ namespace Party_Planner_Application
                 
             }
         }
-
-        private void ViewDetailsButton_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
