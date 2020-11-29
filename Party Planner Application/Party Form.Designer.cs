@@ -336,9 +336,9 @@ namespace Party_Planner_Application
             // 
             // AddItemButton
             // 
-            this.AddItemButton.Location = new System.Drawing.Point(424, 173);
+            this.AddItemButton.Location = new System.Drawing.Point(429, 173);
             this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(113, 26);
+            this.AddItemButton.Size = new System.Drawing.Size(113, 30);
             this.AddItemButton.TabIndex = 14;
             this.AddItemButton.Text = "Add Item";
             this.AddItemButton.UseVisualStyleBackColor = true;
@@ -347,9 +347,10 @@ namespace Party_Planner_Application
             // 
             // ItemTextBox
             // 
+            this.ItemTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemTextBox.Location = new System.Drawing.Point(187, 173);
             this.ItemTextBox.Name = "ItemTextBox";
-            this.ItemTextBox.Size = new System.Drawing.Size(213, 26);
+            this.ItemTextBox.Size = new System.Drawing.Size(213, 30);
             this.ItemTextBox.TabIndex = 13;
             this.ItemTextBox.Visible = false;
             // 
