@@ -22,5 +22,10 @@ namespace Party_Planner_Application
             this.partiesTableAdapter.InsertParty(party_NameTextBox.Text, dateDateTimePicker.Value, locationTextBox.Text);
             this.Close();
         }
+
+        private void New_PartyForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
