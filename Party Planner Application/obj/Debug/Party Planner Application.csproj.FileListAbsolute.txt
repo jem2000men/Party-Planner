@@ -28,3 +28,4 @@ C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planne
 C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.csproj.CoreCompileInputs.cache
 C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.exe
 C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.pdb
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party_Planner_Application.ManageGuestForm.resources

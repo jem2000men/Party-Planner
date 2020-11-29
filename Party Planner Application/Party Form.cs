@@ -65,5 +65,12 @@ namespace Party_Planner_Application
             this.guestsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
         }
+
+        private void manageGuestButton_Click(object sender, EventArgs e)
+        {
+            ManageGuestForm mgForm = new ManageGuestForm(currentparty, int.Parse(guestListBox.SelectedValue.ToString()));
+            mgForm.ShowDialog();
+            this.guestsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Guests, currentparty);
+        }
     }
 }

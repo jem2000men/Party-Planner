@@ -43,6 +43,9 @@ namespace Party_Planner_Application
             this.cancelButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.manageGuestButton = new System.Windows.Forms.Button();
+            this.guestListBox = new System.Windows.Forms.ListBox();
+            this.guestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addGuestButton = new System.Windows.Forms.Button();
             this.guestLabel = new System.Windows.Forms.Panel();
             this.guestsLabel2 = new System.Windows.Forms.Label();
@@ -52,6 +55,7 @@ namespace Party_Planner_Application
             this.suppliesLabel2 = new System.Windows.Forms.Label();
             this.partiesTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.PartiesTableAdapter();
             this.tableAdapterManager = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.guestsTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.GuestsTableAdapter();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -65,12 +69,6 @@ namespace Party_Planner_Application
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.partiesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.partiesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.guestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guestsTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.GuestsTableAdapter();
-            this.guestsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             party_NameLabel = new System.Windows.Forms.Label();
             dateLabel = new System.Windows.Forms.Label();
             locationLabel = new System.Windows.Forms.Label();
@@ -78,13 +76,12 @@ namespace Party_Planner_Application
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).BeginInit();
             this.guestLabel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.supplyLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingNavigator)).BeginInit();
             this.partiesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guestsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // party_NameLabel
@@ -227,7 +224,8 @@ namespace Party_Planner_Application
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            this.panel2.Controls.Add(this.guestsDataGridView);
+            this.panel2.Controls.Add(this.manageGuestButton);
+            this.panel2.Controls.Add(this.guestListBox);
             this.panel2.Controls.Add(this.addGuestButton);
             this.panel2.Controls.Add(this.guestLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -236,6 +234,41 @@ namespace Party_Planner_Application
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(702, 466);
             this.panel2.TabIndex = 1;
+            // 
+            // manageGuestButton
+            // 
+            this.manageGuestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.manageGuestButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.manageGuestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageGuestButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.manageGuestButton.Location = new System.Drawing.Point(12, 388);
+            this.manageGuestButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.manageGuestButton.Name = "manageGuestButton";
+            this.manageGuestButton.Size = new System.Drawing.Size(649, 64);
+            this.manageGuestButton.TabIndex = 13;
+            this.manageGuestButton.Text = "Manage Guest";
+            this.manageGuestButton.UseVisualStyleBackColor = false;
+            this.manageGuestButton.Click += new System.EventHandler(this.manageGuestButton_Click);
+            // 
+            // guestListBox
+            // 
+            this.guestListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.guestListBox.DataSource = this.guestsBindingSource;
+            this.guestListBox.DisplayMember = "First Name";
+            this.guestListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestListBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.guestListBox.FormattingEnabled = true;
+            this.guestListBox.ItemHeight = 29;
+            this.guestListBox.Location = new System.Drawing.Point(12, 173);
+            this.guestListBox.Name = "guestListBox";
+            this.guestListBox.Size = new System.Drawing.Size(649, 207);
+            this.guestListBox.TabIndex = 12;
+            this.guestListBox.ValueMember = "GuestId";
+            // 
+            // guestsBindingSource
+            // 
+            this.guestsBindingSource.DataMember = "Guests";
+            this.guestsBindingSource.DataSource = this.partyDatabaseDataSet;
             // 
             // addGuestButton
             // 
@@ -344,6 +377,10 @@ namespace Party_Planner_Application
             this.tableAdapterManager.ItemsTableAdapter = null;
             this.tableAdapterManager.PartiesTableAdapter = this.partiesTableAdapter;
             this.tableAdapterManager.UpdateOrder = Party_Planner_Application.PartyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // guestsTableAdapter
+            // 
+            this.guestsTableAdapter.ClearBeforeFill = true;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -471,60 +508,6 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
-            // guestsBindingSource
-            // 
-            this.guestsBindingSource.DataMember = "Guests";
-            this.guestsBindingSource.DataSource = this.partyDatabaseDataSet;
-            // 
-            // guestsTableAdapter
-            // 
-            this.guestsTableAdapter.ClearBeforeFill = true;
-            // 
-            // guestsDataGridView
-            // 
-            this.guestsDataGridView.AllowUserToAddRows = false;
-            this.guestsDataGridView.AllowUserToDeleteRows = false;
-            this.guestsDataGridView.AutoGenerateColumns = false;
-            this.guestsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            this.guestsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guestsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.guestsDataGridView.DataSource = this.guestsBindingSource;
-            this.guestsDataGridView.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guestsDataGridView.Location = new System.Drawing.Point(12, 168);
-            this.guestsDataGridView.Name = "guestsDataGridView";
-            this.guestsDataGridView.ReadOnly = true;
-            this.guestsDataGridView.RowHeadersWidth = 62;
-            this.guestsDataGridView.RowTemplate.Height = 28;
-            this.guestsDataGridView.Size = new System.Drawing.Size(668, 276);
-            this.guestsDataGridView.TabIndex = 11;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "First Name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Last Name";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Item";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Item";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
             // Party_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -546,6 +529,7 @@ namespace Party_Planner_Application
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.partyDatabaseDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).EndInit();
             this.guestLabel.ResumeLayout(false);
             this.guestLabel.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -554,8 +538,6 @@ namespace Party_Planner_Application
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingNavigator)).EndInit();
             this.partiesBindingNavigator.ResumeLayout(false);
             this.partiesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guestsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,6 +564,8 @@ namespace Party_Planner_Application
         private System.Windows.Forms.TextBox party_NameTextBox;
         private System.Windows.Forms.DateTimePicker dateDateTimePicker;
         private System.Windows.Forms.TextBox locationTextBox;
+        private System.Windows.Forms.BindingSource guestsBindingSource;
+        private PartyDatabaseDataSetTableAdapters.GuestsTableAdapter guestsTableAdapter;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -595,11 +579,7 @@ namespace Party_Planner_Application
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton partiesBindingNavigatorSaveItem;
         private System.Windows.Forms.BindingNavigator partiesBindingNavigator;
-        private System.Windows.Forms.BindingSource guestsBindingSource;
-        private PartyDatabaseDataSetTableAdapters.GuestsTableAdapter guestsTableAdapter;
-        private System.Windows.Forms.DataGridView guestsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ListBox guestListBox;
+        private System.Windows.Forms.Button manageGuestButton;
     }
 }
