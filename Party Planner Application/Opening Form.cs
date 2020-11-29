@@ -21,6 +21,7 @@ namespace Party_Planner_Application
         {
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             boldCalendarDates();
+            UpdateCalList();
         }
 
         private void calenderButton_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace Party_Planner_Application
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             partyList.SelectedIndex = -1;
             boldCalendarDates();
+            UpdateCalList();
         }
 
         private void parttyListButton_Click(object sender, EventArgs e)
@@ -60,6 +62,8 @@ namespace Party_Planner_Application
                 Party_Form partyForm = new Party_Form(int.Parse(partyList.SelectedValue.ToString()));
                 partyForm.ShowDialog();
                 this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
+                boldCalendarDates();
+                UpdateCalList();
             }
             catch (System.Exception ex)
             {
@@ -68,6 +72,7 @@ namespace Party_Planner_Application
         }
         private void boldCalendarDates()
         {
+            partyCalendar.RemoveAllBoldedDates();
             datesListBox.SelectedIndex = -1;
             for (int i = 0; i < datesListBox.Items.Count; i++)
             {
@@ -84,5 +89,45 @@ namespace Party_Planner_Application
             }
             partyCalendar.UpdateBoldedDates();
         }
+
+        private void calendarButton_Click(object sender, EventArgs e)
+        {
+            partyCalendar.Visible = true;
+            partyBox.Visible = true;
+        }
+
+        private void partyCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            UpdateCalList();
+        }
+
+        private void UpdateCalList()
+        {
+            partyBox.Items.Clear();
+            datesListBox.SelectedIndex = -1;
+            for (int i = 0; i < datesListBox.Items.Count; i++)
+            {
+                datesListBox.SelectedIndex += 1;
+                try
+                {
+                    if (partyCalendar.SelectionRange.Start.ToString("d") == DateTime.Parse(datesListBox.SelectedValue.ToString()).ToString("d"))
+                    {
+                        datesListBox.ValueMember = "Party Name";
+                        partyBox.Items.Add(datesListBox.SelectedValue.ToString());
+                        datesListBox.ValueMember = "Date";
+
+                    }
+                }
+                catch (System.NullReferenceException ex)
+                {
+
+                }
+                catch (System.Exception ex)
+                {
+
+                }
+            }
+        }
+
     }
 }
