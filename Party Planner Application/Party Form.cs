@@ -29,6 +29,8 @@ namespace Party_Planner_Application
 
         private void Party_Form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Items, currentparty);
             // TODO: This line of code loads data into the 'partyDatabaseDataSet.Guests' table. You can move, or remove it, as needed.
             this.guestsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Guests, currentparty);
             // TODO: This line of code loads data into the 'partyDatabaseDataSet.Parties' table. You can move, or remove it, as needed.
@@ -71,6 +73,28 @@ namespace Party_Planner_Application
             ManageGuestForm mgForm = new ManageGuestForm(currentparty, int.Parse(guestListBox.SelectedValue.ToString()));
             mgForm.ShowDialog();
             this.guestsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Guests, currentparty);
+            this.Validate();
+            this.guestsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+        }
+
+        private void addSupplyButton_Click(object sender, EventArgs e)
+        {
+            ItemTextBox.Visible = true;
+            AddItemButton.Visible = true;
+        }
+
+        private void AddItemButton_Click(object sender, EventArgs e)
+        {
+            if (ItemTextBox.Text != "")
+            {
+                this.itemsTableAdapter.InsertItem(-1, ItemTextBox.Text, currentparty);
+                this.itemsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Items, currentparty);
+                this.Validate();
+                this.itemsBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+                
+            }
         }
     }
 }

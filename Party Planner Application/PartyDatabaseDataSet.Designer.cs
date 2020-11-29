@@ -681,6 +681,8 @@ namespace Party_Planner_Application {
             
             private global::System.Data.DataColumn columnItem_Name;
             
+            private global::System.Data.DataColumn columnPartyId;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ItemsDataTable() {
@@ -732,6 +734,14 @@ namespace Party_Planner_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PartyIdColumn {
+                get {
+                    return this.columnPartyId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -767,11 +777,12 @@ namespace Party_Planner_Application {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ItemsRow AddItemsRow(int GuestId, string Item_Name) {
+            public ItemsRow AddItemsRow(int GuestId, string Item_Name, int PartyId) {
                 ItemsRow rowItemsRow = ((ItemsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         GuestId,
-                        Item_Name};
+                        Item_Name,
+                        PartyId};
                 rowItemsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowItemsRow);
                 return rowItemsRow;
@@ -796,6 +807,7 @@ namespace Party_Planner_Application {
             internal void InitVars() {
                 this.columnGuestId = base.Columns["GuestId"];
                 this.columnItem_Name = base.Columns["Item Name"];
+                this.columnPartyId = base.Columns["PartyId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -805,6 +817,8 @@ namespace Party_Planner_Application {
                 base.Columns.Add(this.columnGuestId);
                 this.columnItem_Name = new global::System.Data.DataColumn("Item Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItem_Name);
+                this.columnPartyId = new global::System.Data.DataColumn("PartyId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPartyId);
                 this.columnGuestId.AllowDBNull = false;
                 this.columnItem_Name.AllowDBNull = false;
                 this.columnItem_Name.MaxLength = 50;
@@ -1362,6 +1376,34 @@ namespace Party_Planner_Application {
                 set {
                     this[this.tableItems.Item_NameColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int PartyId {
+                get {
+                    try {
+                        return ((int)(this[this.tableItems.PartyIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PartyId\' in table \'Items\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableItems.PartyIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPartyIdNull() {
+                return this.IsNull(this.tableItems.PartyIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPartyIdNull() {
+                this[this.tableItems.PartyIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2211,13 +2253,16 @@ SELECT GuestId, PartyId, [First Name], [Last Name], Item FROM Guests WHERE (Gues
             tableMapping.DataSetTable = "Items";
             tableMapping.ColumnMappings.Add("GuestId", "GuestId");
             tableMapping.ColumnMappings.Add("Item Name", "Item Name");
+            tableMapping.ColumnMappings.Add("PartyId", "PartyId");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Items] ([GuestId], [Item Name]) VALUES (@GuestId, @Item_Name)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Items] ([GuestId], [Item Name], [PartyId]) VALUES (@GuestId, @Item_N" +
+                "ame, @PartyId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GuestId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GuestId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Item_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Item Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2230,11 +2275,24 @@ SELECT GuestId, PartyId, [First Name], [Last Name], Item FROM Guests WHERE (Gues
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT GuestId, [Item Name] FROM dbo.Items";
+            this._commandCollection[0].CommandText = "SELECT GuestId, [Item Name], PartyId FROM Items";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT GuestId, [Item Name], PartyId FROM Items WHERE PartyId LIKE @value";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PartyId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [Items] ([GuestId], [Item Name], [PartyId]) VALUES (@GuestId, @Item_N" +
+                "ame, @PartyId)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GuestId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "GuestId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Item_Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Item Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PartyId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2259,6 +2317,25 @@ SELECT GuestId, PartyId, [First Name], [Last Name], Item FROM Guests WHERE (Gues
             PartyDatabaseDataSet.ItemsDataTable dataTable = new PartyDatabaseDataSet.ItemsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPartyId(PartyDatabaseDataSet.ItemsDataTable dataTable, global::System.Nullable<int> value) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((value.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(value.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2294,13 +2371,24 @@ SELECT GuestId, PartyId, [First Name], [Last Name], Item FROM Guests WHERE (Gues
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int GuestId, string Item_Name) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(GuestId));
+        public virtual int Insert(global::System.Nullable<int> GuestId, string Item_Name, global::System.Nullable<int> PartyId) {
+            if ((GuestId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(GuestId.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Item_Name == null)) {
                 throw new global::System.ArgumentNullException("Item_Name");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Item_Name));
+            }
+            if ((PartyId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PartyId.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2316,6 +2404,47 @@ SELECT GuestId, PartyId, [First Name], [Last Name], Item FROM Guests WHERE (Gues
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertItem(global::System.Nullable<int> GuestId, string Item_Name, global::System.Nullable<int> PartyId) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((GuestId.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(GuestId.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Item_Name == null)) {
+                throw new global::System.ArgumentNullException("Item_Name");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Item_Name));
+            }
+            if ((PartyId.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(PartyId.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

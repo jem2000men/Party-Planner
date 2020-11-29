@@ -50,6 +50,10 @@ namespace Party_Planner_Application
             this.guestLabel = new System.Windows.Forms.Panel();
             this.guestsLabel2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AddItemButton = new System.Windows.Forms.Button();
+            this.ItemTextBox = new System.Windows.Forms.TextBox();
+            this.ItemBox = new System.Windows.Forms.ListBox();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addSupplyButton = new System.Windows.Forms.Button();
             this.supplyLabel = new System.Windows.Forms.Panel();
             this.suppliesLabel2 = new System.Windows.Forms.Label();
@@ -69,6 +73,7 @@ namespace Party_Planner_Application
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.partiesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.partiesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.itemsTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.ItemsTableAdapter();
             party_NameLabel = new System.Windows.Forms.Label();
             dateLabel = new System.Windows.Forms.Label();
             locationLabel = new System.Windows.Forms.Label();
@@ -79,6 +84,7 @@ namespace Party_Planner_Application
             ((System.ComponentModel.ISupportInitialize)(this.guestsBindingSource)).BeginInit();
             this.guestLabel.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.supplyLabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingNavigator)).BeginInit();
             this.partiesBindingNavigator.SuspendLayout();
@@ -316,6 +322,9 @@ namespace Party_Planner_Application
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.panel3.Controls.Add(this.AddItemButton);
+            this.panel3.Controls.Add(this.ItemTextBox);
+            this.panel3.Controls.Add(this.ItemBox);
             this.panel3.Controls.Add(this.addSupplyButton);
             this.panel3.Controls.Add(this.supplyLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
@@ -324,6 +333,45 @@ namespace Party_Planner_Application
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(699, 466);
             this.panel3.TabIndex = 2;
+            // 
+            // AddItemButton
+            // 
+            this.AddItemButton.Location = new System.Drawing.Point(424, 173);
+            this.AddItemButton.Name = "AddItemButton";
+            this.AddItemButton.Size = new System.Drawing.Size(113, 26);
+            this.AddItemButton.TabIndex = 14;
+            this.AddItemButton.Text = "Add Item";
+            this.AddItemButton.UseVisualStyleBackColor = true;
+            this.AddItemButton.Visible = false;
+            this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
+            // 
+            // ItemTextBox
+            // 
+            this.ItemTextBox.Location = new System.Drawing.Point(187, 173);
+            this.ItemTextBox.Name = "ItemTextBox";
+            this.ItemTextBox.Size = new System.Drawing.Size(213, 26);
+            this.ItemTextBox.TabIndex = 13;
+            this.ItemTextBox.Visible = false;
+            // 
+            // ItemBox
+            // 
+            this.ItemBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.ItemBox.DataSource = this.itemsBindingSource;
+            this.ItemBox.DisplayMember = "Item Name";
+            this.ItemBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ItemBox.FormattingEnabled = true;
+            this.ItemBox.ItemHeight = 29;
+            this.ItemBox.Location = new System.Drawing.Point(20, 216);
+            this.ItemBox.Name = "ItemBox";
+            this.ItemBox.Size = new System.Drawing.Size(639, 207);
+            this.ItemBox.TabIndex = 12;
+            this.ItemBox.ValueMember = "Item Name";
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "Items";
+            this.itemsBindingSource.DataSource = this.partyDatabaseDataSet;
             // 
             // addSupplyButton
             // 
@@ -337,8 +385,9 @@ namespace Party_Planner_Application
             this.addSupplyButton.Name = "addSupplyButton";
             this.addSupplyButton.Size = new System.Drawing.Size(699, 80);
             this.addSupplyButton.TabIndex = 11;
-            this.addSupplyButton.Text = "Add Supply";
+            this.addSupplyButton.Text = "Add Items";
             this.addSupplyButton.UseVisualStyleBackColor = false;
+            this.addSupplyButton.Click += new System.EventHandler(this.addSupplyButton_Click);
             // 
             // supplyLabel
             // 
@@ -508,6 +557,10 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
+            // itemsTableAdapter
+            // 
+            this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
             // Party_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -533,6 +586,8 @@ namespace Party_Planner_Application
             this.guestLabel.ResumeLayout(false);
             this.guestLabel.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             this.supplyLabel.ResumeLayout(false);
             this.supplyLabel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partiesBindingNavigator)).EndInit();
@@ -581,5 +636,10 @@ namespace Party_Planner_Application
         private System.Windows.Forms.BindingNavigator partiesBindingNavigator;
         private System.Windows.Forms.ListBox guestListBox;
         private System.Windows.Forms.Button manageGuestButton;
+        private System.Windows.Forms.ListBox ItemBox;
+        private System.Windows.Forms.BindingSource itemsBindingSource;
+        private PartyDatabaseDataSetTableAdapters.ItemsTableAdapter itemsTableAdapter;
+        private System.Windows.Forms.Button AddItemButton;
+        private System.Windows.Forms.TextBox ItemTextBox;
     }
 }
