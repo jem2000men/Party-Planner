@@ -44,6 +44,7 @@
             this.itemComboBox = new System.Windows.Forms.ComboBox();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.ItemsTableAdapter();
+            this.ClearItemBtn = new System.Windows.Forms.Button();
             first_NameLabel = new System.Windows.Forms.Label();
             last_NameLabel = new System.Windows.Forms.Label();
             itemLabel = new System.Windows.Forms.Label();
@@ -164,12 +165,23 @@
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
             // 
+            // ClearItemBtn
+            // 
+            this.ClearItemBtn.Location = new System.Drawing.Point(489, 139);
+            this.ClearItemBtn.Name = "ClearItemBtn";
+            this.ClearItemBtn.Size = new System.Drawing.Size(162, 36);
+            this.ClearItemBtn.TabIndex = 10;
+            this.ClearItemBtn.Text = "Clear Item";
+            this.ClearItemBtn.UseVisualStyleBackColor = true;
+            this.ClearItemBtn.Click += new System.EventHandler(this.ClearItemBtn_Click);
+            // 
             // ManageGuestForm
             // 
             this.AcceptButton = this.SaveAndExit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 276);
+            this.ClientSize = new System.Drawing.Size(663, 276);
+            this.Controls.Add(this.ClearItemBtn);
             this.Controls.Add(itemLabel);
             this.Controls.Add(this.itemComboBox);
             this.Controls.Add(this.CancelAndExit);
@@ -204,5 +216,6 @@
         private System.Windows.Forms.ComboBox itemComboBox;
         private System.Windows.Forms.BindingSource itemsBindingSource;
         private PartyDatabaseDataSetTableAdapters.ItemsTableAdapter itemsTableAdapter;
+        private System.Windows.Forms.Button ClearItemBtn;
     }
 }

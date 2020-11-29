@@ -50,5 +50,10 @@ namespace Party_Planner_Application
         {
             this.Close();
         }
+
+        private void ClearItemBtn_Click(object sender, EventArgs e)
+        {
+            itemComboBox.SelectedIndex = -1;
+        }
     }
 }
