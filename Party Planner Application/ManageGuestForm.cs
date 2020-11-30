@@ -53,7 +53,7 @@ namespace Party_Planner_Application
 
         private void ClearItemBtn_Click(object sender, EventArgs e)
         {
-            itemComboBox.SelectedIndex = -1;
+            itemComboBox.Text = "";
         }
 
         private void uninviteButton_Click(object sender, EventArgs e)
