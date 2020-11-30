@@ -12,12 +12,12 @@ namespace Party_Planner_Application
 {
     public partial class ManageGuestForm : Form
     {
-        int currentparty;
-        int currentguest;
+        int currentparty; //int to represent partyId
+        int currentguest; //int to represent GuestId
         public ManageGuestForm(int currentparty, int currentguest)
         { 
             InitializeComponent();
-            this.currentparty = currentparty;
+            this.currentparty = currentparty; //Sets attributes
             this.currentguest = currentguest;
         }
 
@@ -31,42 +31,46 @@ namespace Party_Planner_Application
 
         private void ManageGuestForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'partyDatabaseDataSet.Items' table. You can move, or remove it, as needed.
+            // Fill Items combo box and guest info by partyId and guestId
             this.itemsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Items, currentparty);
 
             this.guestsTableAdapter.FillByPartyAndGuest(this.partyDatabaseDataSet.Guests, currentparty, currentguest);
 
         }
 
-        private void SaveAndExit_Click(object sender, EventArgs e)
+        private void SaveAndExit_Click(object sender, EventArgs e) //Applies changes to database
         {
             this.Validate();
             this.guestsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
-            this.Close();
+            this.Close(); //and closes form
         }
 
-        private void CancelAndExit_Click(object sender, EventArgs e)
+        private void CancelAndExit_Click(object sender, EventArgs e) //Closes form without applying changes
         {
             this.Close();
         }
 
         private void ClearItemBtn_Click(object sender, EventArgs e)
         {
-            itemComboBox.Text = "";
+            itemComboBox.Text = ""; //Clears item selected
         }
 
-        private void uninviteButton_Click(object sender, EventArgs e)
+        private void uninviteButton_Click(object sender, EventArgs e) //Uninvites guest
         {
-            if (itemComboBox.SelectedIndex == -1)
+            try
             {
                 this.guestsTableAdapter.DeleteGuest(currentguest, currentparty);
+
+                this.Validate();
+                this.guestsBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+                this.Close();
             }
-            
-            this.Validate();
-            this.guestsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
-            this.Close();
+            catch (System.Exception ex) //Sometimes error occurs when item changed before uninviting, this addresses issue
+            {
+                this.Close();
+            }
         }
     }
 }
