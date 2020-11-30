@@ -104,12 +104,13 @@ namespace Party_Planner_Application
 
         private void partyReportButton_Click(object sender, EventArgs e)
         {
-            var doc = DocX.Create("report.docx");
+            var reportDoc = DocX.Create("report.docx");
             string titleText = "Party Report\n";
             string reportInfo = "Party Name: " + party_NameTextBox.Text + "\n";
             reportInfo += "Date: " + dateDateTimePicker.Value.ToString("d") + "\n";
             reportInfo += "Location: " + locationTextBox.Text + "\n\n";
             string guestInfo = "Invited Guests:\n";
+            string itemInfo = "Items:\n";
 
             if (guestListBox.Items.Count == 0)
             {
@@ -139,21 +140,44 @@ namespace Party_Planner_Application
                     }
                 }
                 guestListBox.SelectedIndex = -1;
+                guestInfo += "\n";
+            }
+            if (ItemBox.Items.Count == 0)
+            {
+                itemInfo += "(none)\n";
+            }
+            else
+            {
+                ItemBox.SelectedIndex = -1;
+                for (int i = 0; i < ItemBox.Items.Count; i++)
+                {
+                    try
+                    {
+                        ItemBox.SelectedIndex += 1;
+                        itemInfo += ItemBox.SelectedValue.ToString() + "\n";
+                    }
+                    catch (System.Exception ex)
+                    {
+
+                    }
+                }
+                ItemBox.SelectedIndex = -1;
             }
 
             var titleFormat = new Formatting();
             var infoFormat = new Formatting();
             infoFormat.Size = 16;
             titleFormat.Size = 26;
-            doc.InsertParagraph(titleText, false, titleFormat);
-            doc.InsertParagraph(reportInfo, false, infoFormat);
-            doc.InsertParagraph(guestInfo, false, infoFormat);
+            reportDoc.InsertParagraph(titleText, false, titleFormat);
+            reportDoc.InsertParagraph(reportInfo, false, infoFormat);
+            reportDoc.InsertParagraph(guestInfo, false, infoFormat);
+            reportDoc.InsertParagraph(itemInfo, false, infoFormat);
 
             
             
             
             
-            doc.Save();
+            reportDoc.Save();
             Process.Start("WINWORD.EXE", "report.docx");
         }
     }
