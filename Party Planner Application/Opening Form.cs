@@ -19,6 +19,7 @@ namespace Party_Planner_Application
 
         private void openingForm_Load(object sender, EventArgs e)
         {
+            //On load, fill parties and bold and fill calendar list
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             boldCalendarDates();
             UpdateCalList();
@@ -31,16 +32,17 @@ namespace Party_Planner_Application
 
         private void addPartyButton_Click(object sender, EventArgs e)
         {
+            // Open party form and save values
             New_PartyForm newPForm = new New_PartyForm();
             newPForm.ShowDialog();
             this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
             partyList.SelectedIndex = -1;
-            boldCalendarDates();
+            boldCalendarDates(); //Update calendar bolded dates and claendar list
             UpdateCalList();
         }
 
         private void parttyListButton_Click(object sender, EventArgs e)
-        {
+        { //Toggle party list
             if (partyList.Visible == false)
             {
                 partyList.SelectedIndex = -1;
@@ -56,7 +58,7 @@ namespace Party_Planner_Application
 
 
         private void openPartybutton_Click(object sender, EventArgs e)
-        {
+        { //Opens party form for chosen party from list
             try
             {
                 Party_Form partyForm = new Party_Form(int.Parse(partyList.SelectedValue.ToString()));
@@ -65,16 +67,16 @@ namespace Party_Planner_Application
                 boldCalendarDates();
                 UpdateCalList();
             }
-            catch (System.Exception ex)
+            catch (System.Exception ex) //Otherwise asks user to pick party
             {
                 MessageBox.Show("Please pick a party first!");
             }
         }
         private void boldCalendarDates()
         {
-            partyCalendar.RemoveAllBoldedDates();
-            datesListBox.SelectedIndex = -1;
-            for (int i = 0; i < datesListBox.Items.Count; i++)
+            partyCalendar.RemoveAllBoldedDates(); //To bold dates first clear all bolded dates
+            datesListBox.SelectedIndex = -1; //Go to beginning of dateslistBox which holds all dates for parties
+            for (int i = 0; i < datesListBox.Items.Count; i++) //For each date, bold it
             {
                 try
                 {
@@ -87,11 +89,11 @@ namespace Party_Planner_Application
 
                 }
             }
-            partyCalendar.UpdateBoldedDates();
+            partyCalendar.UpdateBoldedDates(); //Update the calendar to show bolded dates
         }
 
         private void calendarButton_Click(object sender, EventArgs e)
-        {
+        { //Toggles calendar and party list box which shows parties for selected date
             if (partyCalendar.Visible == false)
             {
                 partyCalendar.Visible = true;
@@ -106,20 +108,20 @@ namespace Party_Planner_Application
 
         private void partyCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            UpdateCalList();
+            UpdateCalList(); //When date changed update parties list box below calendar
         }
 
         private void UpdateCalList()
         {
-            partyBox.Items.Clear();
-            datesListBox.SelectedIndex = -1;
+            partyBox.Items.Clear(); //Clear party list box below calendar
+            datesListBox.SelectedIndex = -1; //Go to beggining
             for (int i = 0; i < datesListBox.Items.Count; i++)
             {
-                datesListBox.SelectedIndex += 1;
+                datesListBox.SelectedIndex += 1; //Increment index
                 try
                 {
-                    if (partyCalendar.SelectionRange.Start.ToString("d") == DateTime.Parse(datesListBox.SelectedValue.ToString()).ToString("d"))
-                    {
+                    if (partyCalendar.SelectionRange.Start.ToString("d") == DateTime.Parse(datesListBox.SelectedValue.ToString()).ToString("d")) //Compare dates using short date format (Selected date and stored party dates)
+                    {// if match, change calue member to party name, add to party list box, and change value member back to date for next comparison
                         datesListBox.ValueMember = "Party Name";
                         partyBox.Items.Add(datesListBox.SelectedValue.ToString());
                         datesListBox.ValueMember = "Date";
@@ -128,11 +130,11 @@ namespace Party_Planner_Application
                 }
                 catch (System.NullReferenceException ex)
                 {
-
+                    //Catch if no date for specific party
                 }
                 catch (System.Exception ex)
                 {
-
+                    //Catch other exceptions
                 }
             }
         }

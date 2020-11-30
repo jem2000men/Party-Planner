@@ -16,7 +16,7 @@ namespace Party_Planner_Application
         public NewGuestForm(int currentParty)
         {
             InitializeComponent();
-            this.currentParty = currentParty;
+            this.currentParty = currentParty; //Set attributes
         }
 
         private void NewGuestForm_Load(object sender, EventArgs e)
@@ -26,8 +26,15 @@ namespace Party_Planner_Application
 
         private void inviteGuestButton_Click(object sender, EventArgs e)
         {
-            this.guestsTableAdapter.InsertGuest(currentParty, firstNameTextBox.Text, lastNameTextBox.Text, null);
-            this.Close();
+            if (firstNameTextBox.Text != "") //Ensured a first name is entered
+            {
+                this.guestsTableAdapter.InsertGuest(currentParty, firstNameTextBox.Text, lastNameTextBox.Text, null);
+                this.Close();
+            }
+            else //Otherwise ask user for one
+            {
+                MessageBox.Show("Please enter a first name!");
+            }
         }
     }
 }

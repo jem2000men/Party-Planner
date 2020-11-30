@@ -17,10 +17,17 @@ namespace Party_Planner_Application
             InitializeComponent();
         }
 
-        private void AddPartyButton_Click(object sender, EventArgs e)
+        private void AddPartyButton_Click(object sender, EventArgs e) //Adds party to database with specified values
         {
-            this.partiesTableAdapter.InsertParty(party_NameTextBox.Text, dateDateTimePicker.Value, locationTextBox.Text);
-            this.Close();
+            if (party_NameTextBox.Text != "") //Ensures there is a party name
+            {
+                this.partiesTableAdapter.InsertParty(party_NameTextBox.Text, dateDateTimePicker.Value, locationTextBox.Text);
+                this.Close();
+            }
+            else //if not ask user to add one
+            {
+                MessageBox.Show("Please enter a party name first!");
+            }
         }
 
         private void New_PartyForm_Load(object sender, EventArgs e)
