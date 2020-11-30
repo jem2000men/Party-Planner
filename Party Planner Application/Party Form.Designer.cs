@@ -106,7 +106,7 @@ namespace Party_Planner_Application
             party_NameLabel.BackColor = System.Drawing.SystemColors.Control;
             party_NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             party_NameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            party_NameLabel.Location = new System.Drawing.Point(77, 64);
+            party_NameLabel.Location = new System.Drawing.Point(161, 128);
             party_NameLabel.Name = "party_NameLabel";
             party_NameLabel.Size = new System.Drawing.Size(144, 29);
             party_NameLabel.TabIndex = 12;
@@ -118,7 +118,7 @@ namespace Party_Planner_Application
             dateLabel.BackColor = System.Drawing.SystemColors.Control;
             dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dateLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            dateLabel.Location = new System.Drawing.Point(77, 121);
+            dateLabel.Location = new System.Drawing.Point(161, 185);
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new System.Drawing.Size(69, 29);
             dateLabel.TabIndex = 14;
@@ -130,7 +130,7 @@ namespace Party_Planner_Application
             locationLabel.BackColor = System.Drawing.SystemColors.Control;
             locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             locationLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            locationLabel.Location = new System.Drawing.Point(77, 178);
+            locationLabel.Location = new System.Drawing.Point(161, 242);
             locationLabel.Name = "locationLabel";
             locationLabel.Size = new System.Drawing.Size(110, 29);
             locationLabel.TabIndex = 16;
@@ -192,7 +192,7 @@ namespace Party_Planner_Application
             // 
             this.party_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partiesBindingSource, "Party Name", true));
             this.party_NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.party_NameTextBox.Location = new System.Drawing.Point(257, 61);
+            this.party_NameTextBox.Location = new System.Drawing.Point(341, 125);
             this.party_NameTextBox.Name = "party_NameTextBox";
             this.party_NameTextBox.Size = new System.Drawing.Size(423, 35);
             this.party_NameTextBox.TabIndex = 13;
@@ -211,7 +211,7 @@ namespace Party_Planner_Application
             // 
             this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.partiesBindingSource, "Date", true));
             this.dateDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateDateTimePicker.Location = new System.Drawing.Point(257, 121);
+            this.dateDateTimePicker.Location = new System.Drawing.Point(341, 185);
             this.dateDateTimePicker.Name = "dateDateTimePicker";
             this.dateDateTimePicker.Size = new System.Drawing.Size(423, 35);
             this.dateDateTimePicker.TabIndex = 15;
@@ -220,7 +220,7 @@ namespace Party_Planner_Application
             // 
             this.locationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.partiesBindingSource, "Location", true));
             this.locationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTextBox.Location = new System.Drawing.Point(257, 178);
+            this.locationTextBox.Location = new System.Drawing.Point(341, 242);
             this.locationTextBox.Name = "locationTextBox";
             this.locationTextBox.Size = new System.Drawing.Size(423, 35);
             this.locationTextBox.TabIndex = 17;
