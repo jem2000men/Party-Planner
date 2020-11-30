@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Xceed.Document.NET;
+using Xceed.Words.NET;
 
 namespace Party_Planner_Application
 {
@@ -97,6 +100,61 @@ namespace Party_Planner_Application
                 ItemBox.SelectedIndex = -1;
                 
             }
+        }
+
+        private void partyReportButton_Click(object sender, EventArgs e)
+        {
+            var doc = DocX.Create("report.docx");
+            string titleText = "Party Report\n";
+            string reportInfo = "Party Name: " + party_NameTextBox.Text + "\n";
+            reportInfo += "Date: " + dateDateTimePicker.Value.ToString("d") + "\n";
+            reportInfo += "Location: " + locationTextBox.Text + "\n\n";
+            string guestInfo = "Invited Guests:\n";
+
+            if (guestListBox.Items.Count == 0)
+            {
+                guestInfo += "(none)\n\n";
+            }
+            else
+            {
+                guestListBox.SelectedIndex = -1;
+                for (int i = 0; i < guestListBox.Items.Count; i++)
+                {
+                    try
+                    {
+                        guestListBox.SelectedIndex += 1;
+                        guestInfo += first_NameLabel1.Text + " " + last_NameLabel1.Text + " bringing ";
+                        if (itemLabel1.Text == "")
+                        {
+                            guestInfo += "nothing.\n";
+                        }
+                        else
+                        {
+                            guestInfo += itemLabel1.Text + ".\n";
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+
+                    }
+                }
+                guestListBox.SelectedIndex = -1;
+            }
+
+            var titleFormat = new Formatting();
+            var infoFormat = new Formatting();
+            infoFormat.Size = 16;
+            titleFormat.Size = 26;
+            doc.InsertParagraph(titleText, false, titleFormat);
+            doc.InsertParagraph(reportInfo, false, infoFormat);
+            doc.InsertParagraph(guestInfo, false, infoFormat);
+
+            
+            
+            
+            
+            doc.Save();
+            Process.Start("WINWORD.EXE", "report.docx");
         }
     }
 }
