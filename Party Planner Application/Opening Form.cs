@@ -92,8 +92,16 @@ namespace Party_Planner_Application
 
         private void calendarButton_Click(object sender, EventArgs e)
         {
-            partyCalendar.Visible = true;
-            partyBox.Visible = true;
+            if (partyCalendar.Visible == false)
+            {
+                partyCalendar.Visible = true;
+                partyBox.Visible = true;
+            }
+            else
+            {
+                partyCalendar.Visible = false;
+                partyBox.Visible = false ;
+            }
         }
 
         private void partyCalendar_DateChanged(object sender, DateRangeEventArgs e)
