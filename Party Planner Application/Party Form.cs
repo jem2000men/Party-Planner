@@ -98,7 +98,7 @@ namespace Party_Planner_Application
                 this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
                 ItemTextBox.Text = "";
                 ItemBox.SelectedIndex = -1;
-                
+                removeItem.Visible = true;
             }
         }
 
@@ -179,6 +179,15 @@ namespace Party_Planner_Application
             
             reportDoc.Save();
             Process.Start("WINWORD.EXE", "report.docx");
+        }
+
+        private void removeItem_Click(object sender, EventArgs e)
+        {
+            this.itemsTableAdapter.DeleteItem(currentparty, ItemBox.SelectedValue.ToString());
+            this.itemsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Items, currentparty);
+            this.Validate();
+            this.itemsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
         }
     }
 }

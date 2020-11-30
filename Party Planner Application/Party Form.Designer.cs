@@ -56,6 +56,7 @@ namespace Party_Planner_Application
             this.guestLabel = new System.Windows.Forms.Panel();
             this.guestsLabel2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.removeItem = new System.Windows.Forms.Button();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.ItemTextBox = new System.Windows.Forms.TextBox();
             this.ItemBox = new System.Windows.Forms.ListBox();
@@ -404,6 +405,7 @@ namespace Party_Planner_Application
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.removeItem);
             this.panel3.Controls.Add(this.AddItemButton);
             this.panel3.Controls.Add(this.ItemTextBox);
             this.panel3.Controls.Add(this.ItemBox);
@@ -416,6 +418,17 @@ namespace Party_Planner_Application
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(699, 575);
             this.panel3.TabIndex = 2;
+            // 
+            // removeItem
+            // 
+            this.removeItem.Location = new System.Drawing.Point(20, 405);
+            this.removeItem.Name = "removeItem";
+            this.removeItem.Size = new System.Drawing.Size(639, 61);
+            this.removeItem.TabIndex = 15;
+            this.removeItem.Text = "Remove Item";
+            this.removeItem.UseVisualStyleBackColor = true;
+            this.removeItem.Visible = false;
+            this.removeItem.Click += new System.EventHandler(this.removeItem_Click);
             // 
             // AddItemButton
             // 
@@ -448,7 +461,7 @@ namespace Party_Planner_Application
             this.ItemBox.ItemHeight = 29;
             this.ItemBox.Location = new System.Drawing.Point(20, 216);
             this.ItemBox.Name = "ItemBox";
-            this.ItemBox.Size = new System.Drawing.Size(639, 236);
+            this.ItemBox.Size = new System.Drawing.Size(639, 178);
             this.ItemBox.TabIndex = 12;
             this.ItemBox.ValueMember = "Item Name";
             // 
@@ -550,7 +563,7 @@ namespace Party_Planner_Application
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 25);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -636,7 +649,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.partiesBindingNavigator.Name = "partiesBindingNavigator";
             this.partiesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.partiesBindingNavigator.Size = new System.Drawing.Size(0, 38);
+            this.partiesBindingNavigator.Size = new System.Drawing.Size(0, 35);
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -734,5 +747,6 @@ namespace Party_Planner_Application
         private System.Windows.Forms.Label itemLabel1;
         private System.Windows.Forms.Label last_NameLabel1;
         private System.Windows.Forms.Label first_NameLabel1;
+        private System.Windows.Forms.Button removeItem;
     }
 }
