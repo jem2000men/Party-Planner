@@ -55,5 +55,18 @@ namespace Party_Planner_Application
         {
             itemComboBox.SelectedIndex = -1;
         }
+
+        private void uninviteButton_Click(object sender, EventArgs e)
+        {
+            if (itemComboBox.SelectedIndex == -1)
+            {
+                this.guestsTableAdapter.DeleteGuest(currentguest, currentparty);
+            }
+            
+            this.Validate();
+            this.guestsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+            this.Close();
+        }
     }
 }

@@ -184,8 +184,9 @@ namespace Party_Planner_Application
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.MaximumSize = new System.Drawing.Size(1401, 449);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1924, 449);
+            this.panel1.Size = new System.Drawing.Size(1401, 449);
             this.panel1.TabIndex = 0;
             // 
             // party_NameTextBox
@@ -231,7 +232,7 @@ namespace Party_Planner_Application
             this.partyReportButton.BackColor = System.Drawing.SystemColors.Control;
             this.partyReportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.partyReportButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.partyReportButton.Location = new System.Drawing.Point(1561, 268);
+            this.partyReportButton.Location = new System.Drawing.Point(1038, 268);
             this.partyReportButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.partyReportButton.Name = "partyReportButton";
             this.partyReportButton.Size = new System.Drawing.Size(363, 80);
@@ -246,7 +247,7 @@ namespace Party_Planner_Application
             this.cancelButton.BackColor = System.Drawing.SystemColors.Control;
             this.cancelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cancelButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cancelButton.Location = new System.Drawing.Point(1561, 80);
+            this.cancelButton.Location = new System.Drawing.Point(1038, 80);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(363, 80);
@@ -261,7 +262,7 @@ namespace Party_Planner_Application
             this.saveButton.BackColor = System.Drawing.SystemColors.Control;
             this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.saveButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.saveButton.Location = new System.Drawing.Point(1561, -2);
+            this.saveButton.Location = new System.Drawing.Point(1038, -2);
             this.saveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(363, 80);
@@ -288,7 +289,7 @@ namespace Party_Planner_Application
             this.panel2.Location = new System.Drawing.Point(0, 449);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 601);
+            this.panel2.Size = new System.Drawing.Size(702, 575);
             this.panel2.TabIndex = 1;
             // 
             // itemLabel1
@@ -410,10 +411,10 @@ namespace Party_Planner_Application
             this.panel3.Controls.Add(this.supplyLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Location = new System.Drawing.Point(1225, 449);
+            this.panel3.Location = new System.Drawing.Point(702, 449);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(699, 601);
+            this.panel3.Size = new System.Drawing.Size(699, 575);
             this.panel3.TabIndex = 2;
             // 
             // AddItemButton
@@ -635,7 +636,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.partiesBindingNavigator.Name = "partiesBindingNavigator";
             this.partiesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.partiesBindingNavigator.Size = new System.Drawing.Size(523, 33);
+            this.partiesBindingNavigator.Size = new System.Drawing.Size(0, 38);
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -653,13 +654,14 @@ namespace Party_Planner_Application
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.ClientSize = new System.Drawing.Size(1399, 1050);
             this.Controls.Add(this.partiesBindingNavigator);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1424, 1106);
             this.Name = "Party_Form";
             this.Text = "Party_Form";
             this.Load += new System.EventHandler(this.Party_Form_Load);

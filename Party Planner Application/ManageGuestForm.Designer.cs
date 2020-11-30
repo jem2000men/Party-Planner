@@ -45,6 +45,7 @@
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter = new Party_Planner_Application.PartyDatabaseDataSetTableAdapters.ItemsTableAdapter();
             this.ClearItemBtn = new System.Windows.Forms.Button();
+            this.uninviteButton = new System.Windows.Forms.Button();
             first_NameLabel = new System.Windows.Forms.Label();
             last_NameLabel = new System.Windows.Forms.Label();
             itemLabel = new System.Windows.Forms.Label();
@@ -175,12 +176,25 @@
             this.ClearItemBtn.UseVisualStyleBackColor = true;
             this.ClearItemBtn.Click += new System.EventHandler(this.ClearItemBtn_Click);
             // 
+            // uninviteButton
+            // 
+            this.uninviteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.uninviteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uninviteButton.Location = new System.Drawing.Point(457, 204);
+            this.uninviteButton.Name = "uninviteButton";
+            this.uninviteButton.Size = new System.Drawing.Size(153, 52);
+            this.uninviteButton.TabIndex = 11;
+            this.uninviteButton.Text = "Uninvite";
+            this.uninviteButton.UseVisualStyleBackColor = false;
+            this.uninviteButton.Click += new System.EventHandler(this.uninviteButton_Click);
+            // 
             // ManageGuestForm
             // 
             this.AcceptButton = this.SaveAndExit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 276);
+            this.Controls.Add(this.uninviteButton);
             this.Controls.Add(this.ClearItemBtn);
             this.Controls.Add(itemLabel);
             this.Controls.Add(this.itemComboBox);
@@ -217,5 +231,6 @@
         private System.Windows.Forms.BindingSource itemsBindingSource;
         private PartyDatabaseDataSetTableAdapters.ItemsTableAdapter itemsTableAdapter;
         private System.Windows.Forms.Button ClearItemBtn;
+        private System.Windows.Forms.Button uninviteButton;
     }
 }
