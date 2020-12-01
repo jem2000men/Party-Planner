@@ -138,6 +138,7 @@ namespace Party_Planner_Application
                     //Catch other exceptions
                 }
             }
+            partyList.SelectedIndex = -1;
         }
 
     }
