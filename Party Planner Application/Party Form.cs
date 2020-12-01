@@ -70,6 +70,7 @@ namespace Party_Planner_Application
             this.Validate();
             this.guestsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+            guestListBox.SelectedIndex = guestListBox.Items.Count - 1; //go to newly added guest
         }
 
         private void manageGuestButton_Click(object sender, EventArgs e)
