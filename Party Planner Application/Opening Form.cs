@@ -66,6 +66,7 @@ namespace Party_Planner_Application
                 this.partiesTableAdapter.Fill(this.partyDatabaseDataSet.Parties);
                 boldCalendarDates();
                 UpdateCalList();
+                partyList.SelectedIndex = -1;
             }
             catch (System.Exception ex) //Otherwise asks user to pick party
             {
