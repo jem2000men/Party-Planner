@@ -37,6 +37,7 @@ namespace Party_Planner_Application
             System.Windows.Forms.Label itemLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Party_Form));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RemovePartyButton = new System.Windows.Forms.Button();
             this.party_NameTextBox = new System.Windows.Forms.TextBox();
             this.partiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partyDatabaseDataSet = new Party_Planner_Application.PartyDatabaseDataSet();
@@ -173,6 +174,7 @@ namespace Party_Planner_Application
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.RemovePartyButton);
             this.panel1.Controls.Add(party_NameLabel);
             this.panel1.Controls.Add(this.party_NameTextBox);
             this.panel1.Controls.Add(dateLabel);
@@ -189,6 +191,22 @@ namespace Party_Planner_Application
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1401, 449);
             this.panel1.TabIndex = 0;
+            // 
+            // RemovePartyButton
+            // 
+            this.RemovePartyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RemovePartyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.RemovePartyButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RemovePartyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemovePartyButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RemovePartyButton.Location = new System.Drawing.Point(1039, 358);
+            this.RemovePartyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RemovePartyButton.Name = "RemovePartyButton";
+            this.RemovePartyButton.Size = new System.Drawing.Size(363, 80);
+            this.RemovePartyButton.TabIndex = 18;
+            this.RemovePartyButton.Text = "Remove Party";
+            this.RemovePartyButton.UseVisualStyleBackColor = false;
+            this.RemovePartyButton.Click += new System.EventHandler(this.RemovePartyButton_Click);
             // 
             // party_NameTextBox
             // 
@@ -554,6 +572,7 @@ namespace Party_Planner_Application
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -748,5 +767,6 @@ namespace Party_Planner_Application
         private System.Windows.Forms.Label last_NameLabel1;
         private System.Windows.Forms.Label first_NameLabel1;
         private System.Windows.Forms.Button removeItem;
+        private System.Windows.Forms.Button RemovePartyButton;
     }
 }

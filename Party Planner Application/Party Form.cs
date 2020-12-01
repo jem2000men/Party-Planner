@@ -211,5 +211,18 @@ namespace Party_Planner_Application
             this.itemsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
         }
+
+        private void RemovePartyButton_Click(object sender, EventArgs e) //Removes party
+        {
+            this.partiesTableAdapter.DeleteParty(currentparty);
+            this.guestsTableAdapter.DeleteAllGuest(currentparty);
+            this.itemsTableAdapter.DeleteAllItems(currentparty);
+            this.Validate();
+            this.itemsBindingSource.EndEdit();
+            this.guestsBindingSource.EndEdit();
+            this.partiesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+            this.Close();
+        }
     }
 }
