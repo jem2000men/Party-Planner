@@ -76,20 +76,25 @@ namespace Party_Planner_Application
         private void manageGuestButton_Click(object sender, EventArgs e)
         {//Open manage guest form and save changes
             int currentGuest = guestListBox.SelectedIndex; //save current selected guest
-            ManageGuestForm mgForm = new ManageGuestForm(currentparty, int.Parse(guestListBox.SelectedValue.ToString()));
-            mgForm.ShowDialog();
-            this.guestsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Guests, currentparty);
-            this.Validate();
-            this.guestsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
-            try
+            if (currentGuest >= 0)
             {
-                guestListBox.SelectedIndex = currentGuest; //pick guest just managed
+                ManageGuestForm mgForm = new ManageGuestForm(currentparty, int.Parse(guestListBox.SelectedValue.ToString()));
+                mgForm.ShowDialog();
+                this.guestsTableAdapter.FillByPartyId(this.partyDatabaseDataSet.Guests, currentparty);
+                this.Validate();
+                this.guestsBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
+                try
+                {
+                    guestListBox.SelectedIndex = currentGuest; //pick guest just managed
+                }
+                catch (System.Exception ex)
+                {
+                    guestListBox.SelectedIndex = -1;
+                }
             }
-            catch (System.Exception ex)
-            {
-                guestListBox.SelectedIndex = -1;
-            }
+            else
+                MessageBox.Show("Please select a guest to manage first!");
         }
 
         private void addSupplyButton_Click(object sender, EventArgs e)

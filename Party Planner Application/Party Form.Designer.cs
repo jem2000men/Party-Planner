@@ -290,7 +290,7 @@ namespace Party_Planner_Application
             this.panel2.Location = new System.Drawing.Point(0, 449);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 575);
+            this.panel2.Size = new System.Drawing.Size(702, 601);
             this.panel2.TabIndex = 1;
             // 
             // itemLabel1
@@ -413,10 +413,10 @@ namespace Party_Planner_Application
             this.panel3.Controls.Add(this.supplyLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Location = new System.Drawing.Point(702, 449);
+            this.panel3.Location = new System.Drawing.Point(703, 449);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(699, 575);
+            this.panel3.Size = new System.Drawing.Size(699, 601);
             this.panel3.TabIndex = 2;
             // 
             // removeItem
@@ -648,7 +648,7 @@ namespace Party_Planner_Application
             this.partiesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.partiesBindingNavigator.Name = "partiesBindingNavigator";
             this.partiesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.partiesBindingNavigator.Size = new System.Drawing.Size(0, 35);
+            this.partiesBindingNavigator.Size = new System.Drawing.Size(1, 35);
             this.partiesBindingNavigator.TabIndex = 3;
             this.partiesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -666,7 +666,7 @@ namespace Party_Planner_Application
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1399, 1050);
+            this.ClientSize = new System.Drawing.Size(1402, 1050);
             this.Controls.Add(this.partiesBindingNavigator);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -674,6 +674,7 @@ namespace Party_Planner_Application
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1424, 1106);
+            this.MinimumSize = new System.Drawing.Size(1424, 1018);
             this.Name = "Party_Form";
             this.Text = "Party_Form";
             this.Load += new System.EventHandler(this.Party_Form_Load);
