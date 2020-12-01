@@ -82,7 +82,14 @@ namespace Party_Planner_Application
             this.Validate();
             this.guestsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.partyDatabaseDataSet);
-            guestListBox.SelectedIndex = currentGuest; //pick guest just managed
+            try
+            {
+                guestListBox.SelectedIndex = currentGuest; //pick guest just managed
+            }
+            catch (System.Exception ex)
+            {
+                guestListBox.SelectedIndex = -1;
+            }
         }
 
         private void addSupplyButton_Click(object sender, EventArgs e)

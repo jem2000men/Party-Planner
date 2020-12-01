@@ -32,3 +32,7 @@ C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planne
 C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Xceed.Document.NET.dll
 C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Xceed.Words.NET.dll
 C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.csproj.CopyComplete
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Party Planner Application.exe.manifest
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\bin\Debug\Party Planner Application.application
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.exe.manifest
+C:\Users\jem20\source\repos\Party Planner Application\Party-Planner\Party Planner Application\obj\Debug\Party Planner Application.application
